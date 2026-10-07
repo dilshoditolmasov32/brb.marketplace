@@ -1,0 +1,345 @@
+{
+  "common": {
+    "siteName": "BRB Mikromoliya tashkiloti",
+    "brand": "BRB",
+    "tagline": "Mikromoliya tashkiloti",
+    "apply": "Ariza berish",
+    "close": "Yopish",
+    "viewAll": "Barchasini ko‘rish",
+    "retry": "Qayta urinish"
+  },
+  "header": {
+    "utilityNav": "Yordamchi havolalar",
+    "mainNav": "Asosiy navigatsiya",
+    "categoriesNav": "Kategoriyalar",
+    "city": "Toshkent",
+    "branches": "Filiallar",
+    "becomePartner": "Hamkor bo‘lish",
+    "faq": "Savol-javob",
+    "myApplications": "Arizalarim",
+    "language": "Til",
+    "catalog": "Katalog",
+    "searchPlaceholder": "Mahsulotlar va turkumlar izlash",
+    "search": "Qidirish",
+    "login": "Kirish",
+    "favorites": "Saralangan",
+    "cart": "Savat",
+    "menu": "Menyu",
+    "deals": "Chegirmalar",
+    "installment": "Nasiya xarid",
+    "calculator": "Kalkulyator"
+  },
+  "footer": {
+    "about": {
+      "title": "Biz haqimizda",
+      "company": "Tashkilot haqida",
+      "branches": "Filiallar",
+      "careers": "Vakansiyalar"
+    },
+    "users": {
+      "title": "Foydalanuvchilarga",
+      "contact": "Biz bilan bog‘lanish",
+      "faq": "Savol-javob",
+      "calculator": "Nasiya kalkulyatori"
+    },
+    "partners": {
+      "title": "Tadbirkorlarga",
+      "become": "BRB bilan ishlash",
+      "apply": "Hamkorlik arizasi"
+    },
+    "social": "BRB ijtimoiy tarmoqlarda",
+    "privacy": "Maxfiylik kelishuvi",
+    "terms": "Foydalanuvchi kelishuvi",
+    "copyright": "© {year} BRB Mikromoliya tashkiloti. Barcha huquqlar himoyalangan."
+  },
+  "errors": {
+    "loadFailed": "Ma’lumot yuklanmadi",
+    "tryAgain": "Ulanishni tekshirib, qayta urinib ko‘ring."
+  },
+  "finance": {
+    "monthlyPayment": "Oylik to‘lov",
+    "annualRate": "Yillik foiz stavkasi",
+    "term": "To‘lov muddati",
+    "totalInterest": "Jami foiz",
+    "totalPayment": "Jami to‘lov",
+    "months": "{count} oy",
+    "monthUnit": "oy"
+  },
+  "product": {
+    "installmentBadge": "Nasiya",
+    "monthlyPayment": "Oylik to‘lov",
+    "term": "Muddat",
+    "addToCart": "Savatga qo‘shish",
+    "inCart": "Savatda",
+    "rating": "Reyting: 5 dan {value}"
+  },
+  "calculator": {
+    "title": "Nasiya kalkulyatori",
+    "subtitle": "Oylik to‘lovingizni hisoblang. Faqat namuna.",
+    "amount": "Mahsulot narxi",
+    "amountStep": "{step} qadam bilan",
+    "termStep": "1 oy qadam bilan",
+    "rateNote": "{rate} nominal yillik foiz. Komissiya va sug‘urta namunaga kiritilmagan.",
+    "disclaimer": "Namuna hisob-kitob. Haqiqiy kredit taklifi emas.",
+    "seo": {
+      "description": "Nasiya kalkulyatori: mahsulot narxi va muddatni kiriting, oylik to‘lov va jami to‘lovni ko‘ring. Hisob-kitob namuna sifatida."
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Nasiyaga xarid — qulay oylik to‘lovlar",
+      "description": "BRB Mikromoliya tashkiloti: mahsulotlarni nasiyaga xarid qiling, oylik to‘lovni kalkulyatorda hisoblang va onlayn ariza bering."
+    },
+    "sample": "namuna",
+    "hero": {
+      "badge": "Yangi keldi",
+      "price": "Narxi",
+      "perMonth": "Oyiga {amount}",
+      "buy": "Nasiyaga olish",
+      "catalog": "Katalogga o‘tish",
+      "carousel": "Tavsiya etilgan mahsulotlar",
+      "slide": "{current} / {total}",
+      "goTo": "{number}-slaydga o‘tish",
+      "previous": "Oldingi slayd",
+      "next": "Keyingi slayd"
+    },
+    "categories": {
+      "title": "Kategoriyalar"
+    },
+    "promo": {
+      "title": "Nasiya shartlari",
+      "description": "Sahifadagi barcha narxlar va oylik to‘lovlar faqat namuna. Haqiqiy shartlar ariza tasdiqlanganda belgilanadi."
+    },
+    "tabs": {
+      "title": "Mahsulotlar",
+      "popular": "Ommabop",
+      "new": "Yangiliklar",
+      "recommended": "Tavsiya etilgan"
+    },
+    "financing": {
+      "title": "Nasiya bilan xarid qiling",
+      "description": "{min} dan {max} gacha · Tez qaror (namuna)",
+      "rate": "Yillik stavka (namuna)",
+      "maxTerm": "Maksimal muddat",
+      "online": "Onlayn",
+      "onlineLabel": "Ariza berish"
+    },
+    "deals": {
+      "title": "Chegirmalar",
+      "subtitle": "Vaqtli takliflar · Har kuni yangilanadi"
+    },
+    "calculator": {
+      "subtitle": "Mahsulot narxi asosida oylik to‘lovni hisoblang. Faqat namuna."
+    },
+    "steps": {
+      "title": "Nasiya qanday ishlaydi?",
+      "subtitle": "Mahsulot tanlashdan to‘lovgacha — sodda qadamlar",
+      "cta": "Xarid qilishni boshlash",
+      "items": {
+        "choose": {
+          "title": "Mahsulot tanlang",
+          "description": "Saytdan xohlagan mahsulotni tanlang va nasiya variantini ko‘ring."
+        },
+        "calculate": {
+          "title": "Hisoblang",
+          "description": "Kalkulyatorda oylik to‘lovingizni ko‘ring va qulay muddatni tanlang."
+        },
+        "apply": {
+          "title": "Ariza bering",
+          "description": "Onlayn ariza to‘ldiring. Bir necha daqiqa vaqt oladi."
+        },
+        "receive": {
+          "title": "Mahsulotni oling",
+          "description": "Ariza tasdiqlangach, mahsulotni yetkazib berishni buyurtma qiling."
+        }
+      }
+    },
+    "news": {
+      "title": "Yangiliklar va maslahatlar",
+      "subtitle": "Moliyaviy savodxonlik va yangi mahsulotlar haqida"
+    },
+    "faq": {
+      "title": "Ko‘p so‘raladigan savollar",
+      "subtitle": "Nasiya va xarid bo‘yicha tez-tez so‘raladigan savollar",
+      "items": {
+        "documents": {
+          "question": "Nasiya olish uchun qanday hujjatlar kerak?",
+          "answer": "Shaxsni tasdiqlovchi hujjat, telefon raqami va ariza to‘ldirish kifoya. Ayrim hollarda qo‘shimcha hujjatlar so‘ralishi mumkin."
+        },
+        "limits": {
+          "question": "Minimal va maksimal nasiya summasi qancha?",
+          "answer": "Summa chegaralari mahsulot va ariza natijasiga bog‘liq. Kalkulyatordagi qiymatlar namuna sifatida berilgan."
+        },
+        "accuracy": {
+          "question": "Kalkulyatordagi hisob-kitoblar aniqmi?",
+          "answer": "Kalkulyator dastlabki hisobni ko‘rsatadi. Yakuniy shartlar ariza ko‘rib chiqilgandan keyin belgilanadi."
+        },
+        "early": {
+          "question": "Muddatidan avval to‘lash mumkinmi?",
+          "answer": "Muddatidan avval to‘lash shartlari shartnomada ko‘rsatiladi. Aniq ma’lumot uchun biz bilan bog‘laning."
+        },
+        "returns": {
+          "question": "Mahsulotni qaytarish siyosati qanday?",
+          "answer": "Qaytarish shartlari mahsulot turiga va sotuvchiga bog‘liq. Batafsil ma’lumot mahsulot sahifasida beriladi."
+        }
+      }
+    },
+    "cta": {
+      "title": "Hoziroq xarid qiling, keyin to‘lang",
+      "description": "Qulay nasiya shartlari. Barcha raqamlar namuna sifatida ko‘rsatilgan."
+    }
+  },
+  "breadcrumbs": {
+    "label": "Sahifa yo‘li",
+    "home": "Bosh sahifa"
+  },
+  "pagination": {
+    "label": "Sahifalar",
+    "previous": "Orqaga",
+    "next": "Oldinga",
+    "page": "{page}-sahifa"
+  },
+  "catalog": {
+    "title": "Katalog",
+    "all": "Barcha mahsulotlar",
+    "categories": "Kategoriyalar",
+    "total": "Jami",
+    "products": "{count} ta mahsulot",
+    "calculate": "Hisoblash",
+    "sort": {
+      "label": "Saralash",
+      "popular": "Ommabopligi bo‘yicha",
+      "priceAsc": "Avval arzonlari",
+      "priceDesc": "Avval qimmatlari",
+      "discount": "Chegirma bo‘yicha",
+      "title": "Nomi bo‘yicha"
+    },
+    "empty": {
+      "title": "Mahsulot topilmadi",
+      "description": "Boshqa kategoriya yoki qidiruv so‘zini sinab ko‘ring."
+    },
+    "seo": {
+      "description": "BRB katalogi: mahsulotlarni nasiyaga xarid qiling. Har bir mahsulot uchun oylik to‘lov ko‘rsatilgan.",
+      "categoryDescription": "{category}: nasiyaga xarid qilish mumkin bo‘lgan mahsulotlar va ularning oylik to‘lovlari."
+    },
+    "filters": {
+      "title": "Filtrlar",
+      "reset": "Tozalash",
+      "apply": "Filtrlarni qo‘llash",
+      "price": "Narxi, so‘mda",
+      "priceHint": "Mahsulot narxi oralig‘ini belgilang.",
+      "min": "Minimum",
+      "max": "Maksimum",
+      "financing": "Moliyalashtirish",
+      "installmentOnly": "Nasiya mavjud",
+      "zeroInterestOnly": "0% foizli",
+      "term": "To‘lov muddati",
+      "anyTerm": "Farqi yo‘q",
+      "monthlyPayment": "Oylik to‘lov",
+      "brand": "Ishlab chiqaruvchi",
+      "brandSearch": "Qidirish...",
+      "memory": "Xotira"
+    },
+    "chips": {
+      "priceFrom": "{value} dan",
+      "priceTo": "{value} gacha",
+      "term": "{value} nasiya",
+      "monthlyTo": "Oyiga {value} gacha",
+      "remove": "“{label}” filtrini olib tashlash",
+      "clearAll": "Barchasini tozalash"
+    }
+  },
+  "search": {
+    "title": "Qidiruv",
+    "resultsFor": "“{query}” bo‘yicha natijalar",
+    "empty": {
+      "title": "Nimani qidiramiz?",
+      "description": "Yuqoridagi qidiruv maydoniga mahsulot yoki turkum nomini yozing."
+    }
+  },
+  "productPage": {
+    "showImage": "{number}-rasmni ko‘rsatish",
+    "reviewCount": "{count} ta sharh",
+    "outOfStock": "Mavjud emas",
+    "addToFavorites": "Saralanganlarga qo‘shish",
+    "inFavorites": "Saralanganlarda",
+    "about": "Mahsulot haqida",
+    "reviews": "Sharhlar",
+    "similar": "O‘xshash mahsulotlar",
+    "loanAmount": "Nasiya summasi",
+    "delivery": {
+      "title": "Yetkazib berish va mavjudlik",
+      "availability": "Mavjudligi",
+      "shipping": "Yetkazib berish",
+      "returns": "Qaytarish"
+    },
+    "specs": {
+      "title": "Asosiy xususiyatlar",
+      "brand": "Brend",
+      "category": "Kategoriya",
+      "sku": "Artikul",
+      "warranty": "Kafolat",
+      "dimensions": "O‘lchamlari",
+      "weight": "Og‘irligi"
+    },
+    "installment": {
+      "title": "Nasiya bilan xarid qilish",
+      "subtitle": "Faqat namuna hisob-kitob. Yakuniy taklif emas.",
+      "termHint": "Haqiqiy muddatlar ariza tasdiqlanganda belgilanadi",
+      "buy": "Nasiya bilan sotib olish",
+      "calculate": "Kalkulyatorda batafsil hisoblash",
+      "termsTitle": "Nasiya shartlari",
+      "downPayment": "Boshlang‘ich to‘lov",
+      "downPaymentHint": "0 dan {max} gacha. Jami to‘lov boshlang‘ich to‘lovni o‘z ichiga oladi."
+    },
+    "seo": {
+      "description": "{title} — {price}. Nasiyaga: oyiga {monthly} dan. Hisob-kitob namuna sifatida."
+    },
+    "color": "Rang",
+    "memory": "Xotira"
+  },
+  "errorPage": {
+    "home": "Bosh sahifaga qaytish",
+    "notFound": {
+      "title": "Sahifa topilmadi",
+      "description": "Havola eskirgan yoki manzil noto‘g‘ri yozilgan bo‘lishi mumkin."
+    },
+    "forbidden": {
+      "title": "Kirish cheklangan",
+      "description": "Bu sahifani ko‘rish uchun tizimga kirish yoki tegishli ruxsat kerak."
+    },
+    "tooManyRequests": {
+      "title": "So‘rovlar juda ko‘p",
+      "description": "Biroz kutib, qayta urinib ko‘ring."
+    },
+    "unavailable": {
+      "title": "Xizmat vaqtincha ishlamayapti",
+      "description": "Birozdan keyin qayta urinib ko‘ring."
+    },
+    "generic": {
+      "title": "Xatolik yuz berdi",
+      "description": "Sahifani yangilang yoki birozdan keyin qayta urinib ko‘ring."
+    }
+  },
+  "cart": {
+    "title": "Savat",
+    "itemsTotal": "Mahsulotlar summasi",
+    "increase": "Sonini oshirish",
+    "decrease": "Sonini kamaytirish",
+    "remove": "“{title}” ni savatdan olib tashlash",
+    "clear": "Savatni tozalash",
+    "empty": {
+      "title": "Savat bo‘sh",
+      "description": "Katalogdan mahsulot tanlang — u shu yerda paydo bo‘ladi."
+    }
+  },
+  "favorites": {
+    "title": "Saralangan mahsulotlar",
+    "count": "{count} ta saralangan mahsulot",
+    "remove": "Saralanganlardan olib tashlash",
+    "empty": {
+      "title": "Saralanganlar bo‘sh",
+      "description": "Yoqqan mahsulot sahifasida “Saralanganlarga qo‘shish” tugmasini bosing."
+    }
+  }
+}

@@ -1,0 +1,87 @@
+/*
+ * Design tokens — the single source of truth for the visual identity.
+ * Values mirror the Figma variables ("BRB — Marketplace & UI System" / Foundations).
+ * Flow: tokens.css -> main.css (@theme) -> Tailwind utilities -> components.
+ * To rebrand, change --primary* here; nothing else needs to be touched.
+ */
+:root {
+  /* Brand */
+  --primary: #e52716;
+  --primary-hover: #c91e10;
+  --primary-soft: #fef0ee;
+  --on-primary: #ffffff;
+
+  /* Surfaces */
+  --background: #f5f6f8;
+  --surface: #ffffff;
+  --surface-muted: #eef0f3;
+  --surface-disabled: #edf0f4;
+  --surface-inverse: #17212f;
+  --on-inverse: #ffffff;
+  --on-inverse-muted: rgb(255 255 255 / 0.72);
+
+  /* Hero panels on the inverse surface */
+  --hero-card: #1f3a68;
+  --hero-tile-1: #20407c;
+  --hero-tile-2: #16361f;
+  --hero-tile-3: #3a1c47;
+
+  /* Text */
+  --text: #17212f;
+  --text-secondary: #536071;
+  --text-muted: #667386;
+  --text-disabled: #8792a2;
+
+  /* Lines */
+  --border: #d7dde5;
+  --border-strong: #7d899a;
+  --focus: #245bb5;
+
+  /* Status */
+  --success: #18794e;
+  --success-soft: #edf8f1;
+  --warning: #8a5700;
+  --warning-soft: #fff7e5;
+  --error: #b42318;
+  --error-soft: #fef1ef;
+  --rating: #f59e0b;
+
+  /* Overlays */
+  --scrim: rgb(23 33 47 / 0.4);
+  --shadow-color: rgb(23 33 47 / 0.1);
+
+  /* Typography. Switch the whole site between typefaces with --font-base. */
+  --font-inter: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-montserrat: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-base: var(--font-inter);
+
+  /* Shape */
+  --radius-control: 4px;
+  --radius-card: 8px;
+  --radius-overlay: 12px;
+
+  /* Controls */
+  --control-height-sm: 36px;
+  --control-height-md: 44px;
+  --control-height-lg: 52px;
+
+  /* Layout */
+  --page-max-width: 1400px;
+  --page-gutter: 16px;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-disclosure: 200ms;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-gutter: 40px;
+  }
+}

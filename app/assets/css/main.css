@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@import './element-plus.css';
+
+/*
+ * Tailwind theme bound to the design tokens.
+ * Default palettes, radii and shadows are reset so only token-backed utilities exist.
+ */
+@theme inline {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-on-primary: var(--on-primary);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-disabled: var(--surface-disabled);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-on-inverse: var(--on-inverse);
+  --color-on-inverse-muted: var(--on-inverse-muted);
+  --color-hero-card: var(--hero-card);
+  --color-hero-tile-1: var(--hero-tile-1);
+  --color-hero-tile-2: var(--hero-tile-2);
+  --color-hero-tile-3: var(--hero-tile-3);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-focus: var(--focus);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-error: var(--error);
+  --color-error-soft: var(--error-soft);
+  --color-rating: var(--rating);
+  --color-scrim: var(--scrim);
+
+  --font-sans: var(--font-base);
+
+  /* Type scale: size / line-height (Figma text styles) */
+  --text-*: initial;
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.125rem;
+  --text-compact: 0.8125rem;
+  --text-compact--line-height: 1.25rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 3rem;
+
+  --radius-*: initial;
+  --radius-sm: var(--radius-control);
+  --radius-lg: var(--radius-card);
+  --radius-xl: var(--radius-overlay);
+  --radius-full: 999px;
+
+  /* Shadow is reserved for floating surfaces; cards use a 1px border instead */
+  --shadow-*: initial;
+  --shadow-overlay: 0 8px 24px -4px var(--shadow-color);
+
+  --default-transition-duration: var(--duration-fast);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-base);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Keyboard focus: 2px ring + 2px offset on every interactive element */
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Page container: centered, token-driven width and gutters */
+@utility container-page {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}

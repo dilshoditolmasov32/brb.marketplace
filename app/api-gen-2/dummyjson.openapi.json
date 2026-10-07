@@ -1,0 +1,465 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "DummyJSON (subset used by BRB marketplace)",
+    "version": "1.0.0",
+    "description": "DummyJSON does not publish an OpenAPI schema. This file describes the endpoints the app uses and was written against the live responses. Replace it with the real backend schema URL when the backend is ready."
+  },
+  "servers": [{ "url": "https://dummyjson.com" }],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": ["products"],
+        "operationId": "products_list",
+        "parameters": [
+          { "$ref": "#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/skip" },
+          { "$ref": "#/components/parameters/select" },
+          { "$ref": "#/components/parameters/sortBy" },
+          { "$ref": "#/components/parameters/order" }
+        ],
+        "responses": { "200": { "$ref": "#/components/responses/ProductList" } }
+      }
+    },
+    "/products/search": {
+      "get": {
+        "tags": ["products"],
+        "operationId": "products_search",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string" } },
+          { "$ref": "#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/skip" },
+          { "$ref": "#/components/parameters/select" },
+          { "$ref": "#/components/parameters/sortBy" },
+          { "$ref": "#/components/parameters/order" }
+        ],
+        "responses": { "200": { "$ref": "#/components/responses/ProductList" } }
+      }
+    },
+    "/products/categories": {
+      "get": {
+        "tags": ["products"],
+        "operationId": "products_categories",
+        "responses": {
+          "200": {
+            "description": "All product categories",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Category" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/category/{slug}": {
+      "get": {
+        "tags": ["products"],
+        "operationId": "products_by_category",
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "$ref": "#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/skip" },
+          { "$ref": "#/components/parameters/select" },
+          { "$ref": "#/components/parameters/sortBy" },
+          { "$ref": "#/components/parameters/order" }
+        ],
+        "responses": { "200": { "$ref": "#/components/responses/ProductList" } }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "tags": ["products"],
+        "operationId": "products_retrieve",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Single product",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/Product" } }
+            }
+          },
+          "404": { "$ref": "#/components/responses/Error" }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "tags": ["posts"],
+        "operationId": "posts_list",
+        "parameters": [
+          { "$ref": "#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/skip" },
+          { "$ref": "#/components/parameters/select" },
+          { "$ref": "#/components/parameters/sortBy" },
+          { "$ref": "#/components/parameters/order" }
+        ],
+        "responses": {
+          "200": {
+            "description": "Paginated posts",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/PostList" } }
+            }
+          }
+        }
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "tags": ["posts"],
+        "operationId": "posts_retrieve",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Single post",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/Post" } }
+            }
+          },
+          "404": { "$ref": "#/components/responses/Error" }
+        }
+      }
+    },
+    "/carts/user/{userId}": {
+      "get": {
+        "tags": ["carts"],
+        "operationId": "carts_by_user",
+        "parameters": [
+          { "name": "userId", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Carts of a user",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/CartList" } }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["auth"],
+        "operationId": "auth_login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/LoginRequest" } }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Authenticated user with tokens",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/LoginResponse" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/Error" }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": ["auth"],
+        "operationId": "auth_me",
+        "responses": {
+          "200": {
+            "description": "Current user",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/User" } }
+            }
+          },
+          "401": { "$ref": "#/components/responses/Error" }
+        }
+      }
+    },
+    "/auth/refresh": {
+      "post": {
+        "tags": ["auth"],
+        "operationId": "auth_refresh",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/RefreshRequest" } }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New token pair",
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/Tokens" } }
+            }
+          },
+          "401": { "$ref": "#/components/responses/Error" }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "limit": {
+        "name": "limit",
+        "in": "query",
+        "description": "Page size. 0 returns everything.",
+        "schema": { "type": "integer", "minimum": 0 }
+      },
+      "skip": { "name": "skip", "in": "query", "schema": { "type": "integer", "minimum": 0 } },
+      "select": {
+        "name": "select",
+        "in": "query",
+        "description": "Comma-separated list of fields to return",
+        "schema": { "type": "string" }
+      },
+      "sortBy": { "name": "sortBy", "in": "query", "schema": { "type": "string" } },
+      "order": {
+        "name": "order",
+        "in": "query",
+        "schema": { "type": "string", "enum": ["asc", "desc"] }
+      }
+    },
+    "responses": {
+      "ProductList": {
+        "description": "Paginated products",
+        "content": {
+          "application/json": { "schema": { "$ref": "#/components/schemas/ProductList" } }
+        }
+      },
+      "Error": {
+        "description": "Error",
+        "content": {
+          "application/json": { "schema": { "$ref": "#/components/schemas/ApiErrorBody" } }
+        }
+      }
+    },
+    "schemas": {
+      "ApiErrorBody": {
+        "type": "object",
+        "required": ["message"],
+        "properties": { "message": { "type": "string" } }
+      },
+      "Category": {
+        "type": "object",
+        "required": ["slug", "name", "url"],
+        "properties": {
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      },
+      "Review": {
+        "type": "object",
+        "required": ["rating", "comment", "date", "reviewerName", "reviewerEmail"],
+        "properties": {
+          "rating": { "type": "number" },
+          "comment": { "type": "string" },
+          "date": { "type": "string", "format": "date-time" },
+          "reviewerName": { "type": "string" },
+          "reviewerEmail": { "type": "string" }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "description",
+          "category",
+          "price",
+          "discountPercentage",
+          "rating",
+          "stock",
+          "tags",
+          "sku",
+          "availabilityStatus",
+          "reviews",
+          "images",
+          "thumbnail"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "category": { "type": "string" },
+          "price": { "type": "number" },
+          "discountPercentage": { "type": "number" },
+          "rating": { "type": "number" },
+          "stock": { "type": "integer" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "brand": { "type": "string" },
+          "sku": { "type": "string" },
+          "weight": { "type": "number" },
+          "dimensions": {
+            "type": "object",
+            "required": ["width", "height", "depth"],
+            "properties": {
+              "width": { "type": "number" },
+              "height": { "type": "number" },
+              "depth": { "type": "number" }
+            }
+          },
+          "warrantyInformation": { "type": "string" },
+          "shippingInformation": { "type": "string" },
+          "availabilityStatus": { "type": "string" },
+          "reviews": { "type": "array", "items": { "$ref": "#/components/schemas/Review" } },
+          "returnPolicy": { "type": "string" },
+          "minimumOrderQuantity": { "type": "integer" },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "createdAt": { "type": "string", "format": "date-time" },
+              "updatedAt": { "type": "string", "format": "date-time" },
+              "barcode": { "type": "string" },
+              "qrCode": { "type": "string" }
+            }
+          },
+          "images": { "type": "array", "items": { "type": "string" } },
+          "thumbnail": { "type": "string" }
+        }
+      },
+      "ProductList": {
+        "type": "object",
+        "required": ["products", "total", "skip", "limit"],
+        "properties": {
+          "products": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } },
+          "total": { "type": "integer" },
+          "skip": { "type": "integer" },
+          "limit": { "type": "integer" }
+        }
+      },
+      "Post": {
+        "type": "object",
+        "required": ["id", "title", "body", "tags", "reactions", "views", "userId"],
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "body": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "reactions": {
+            "type": "object",
+            "required": ["likes", "dislikes"],
+            "properties": {
+              "likes": { "type": "integer" },
+              "dislikes": { "type": "integer" }
+            }
+          },
+          "views": { "type": "integer" },
+          "userId": { "type": "integer" }
+        }
+      },
+      "PostList": {
+        "type": "object",
+        "required": ["posts", "total", "skip", "limit"],
+        "properties": {
+          "posts": { "type": "array", "items": { "$ref": "#/components/schemas/Post" } },
+          "total": { "type": "integer" },
+          "skip": { "type": "integer" },
+          "limit": { "type": "integer" }
+        }
+      },
+      "CartProduct": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "price",
+          "quantity",
+          "total",
+          "discountPercentage",
+          "discountedTotal",
+          "thumbnail"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "price": { "type": "number" },
+          "quantity": { "type": "integer" },
+          "total": { "type": "number" },
+          "discountPercentage": { "type": "number" },
+          "discountedTotal": { "type": "number" },
+          "thumbnail": { "type": "string" }
+        }
+      },
+      "Cart": {
+        "type": "object",
+        "required": [
+          "id",
+          "products",
+          "total",
+          "discountedTotal",
+          "userId",
+          "totalProducts",
+          "totalQuantity"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "products": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/CartProduct" }
+          },
+          "total": { "type": "number" },
+          "discountedTotal": { "type": "number" },
+          "userId": { "type": "integer" },
+          "totalProducts": { "type": "integer" },
+          "totalQuantity": { "type": "integer" }
+        }
+      },
+      "CartList": {
+        "type": "object",
+        "required": ["carts", "total", "skip", "limit"],
+        "properties": {
+          "carts": { "type": "array", "items": { "$ref": "#/components/schemas/Cart" } },
+          "total": { "type": "integer" },
+          "skip": { "type": "integer" },
+          "limit": { "type": "integer" }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string" },
+          "password": { "type": "string" },
+          "expiresInMins": { "type": "integer" }
+        }
+      },
+      "RefreshRequest": {
+        "type": "object",
+        "properties": {
+          "refreshToken": { "type": "string" },
+          "expiresInMins": { "type": "integer" }
+        }
+      },
+      "Tokens": {
+        "type": "object",
+        "required": ["accessToken", "refreshToken"],
+        "properties": {
+          "accessToken": { "type": "string" },
+          "refreshToken": { "type": "string" }
+        }
+      },
+      "User": {
+        "type": "object",
+        "required": ["id", "username", "email", "firstName", "lastName"],
+        "properties": {
+          "id": { "type": "integer" },
+          "username": { "type": "string" },
+          "email": { "type": "string" },
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "gender": { "type": "string" },
+          "image": { "type": "string" }
+        }
+      },
+      "LoginResponse": {
+        "allOf": [
+          { "$ref": "#/components/schemas/User" },
+          { "$ref": "#/components/schemas/Tokens" }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "schema": "./dummyjson.openapi.json",
+  "outputFile": "apiMethods.ts",
+  "outputPath": "../api/",
+  "rmMethodPrefix": true
+}
