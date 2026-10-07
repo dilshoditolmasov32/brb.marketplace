@@ -13,7 +13,6 @@ const headerCategories = computed(() => categories.value.slice(0, HEADER_CATEGOR
 const CATALOG_MENU_ID = 'header-catalog-menu'
 
 const query = ref('')
-const isMenuOpen = ref(false)
 const isCatalogOpen = ref(false)
 
 // The catalog panel fills the viewport below the sticky header
@@ -26,19 +25,10 @@ async function submitSearch() {
   await navigateTo({ path: localePath(ROUTES.search), query: { q } })
 }
 
-// The mobile menu makes way for the sign-in dialog
-function openLogin() {
-  isMenuOpen.value = false
-  authModal.open('login')
-}
-
-// Close the menus after any navigation
+// Close the catalog after any navigation
 watch(
   () => route.fullPath,
-  () => {
-    isMenuOpen.value = false
-    isCatalogOpen.value = false
-  },
+  () => (isCatalogOpen.value = false),
 )
 
 const utilityLinks = [
@@ -145,7 +135,7 @@ const actions = [
           v-for="action in actions"
           :key="action.to"
           :to="localePath(action.to)"
-          class="flex min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text hover:text-primary"
+          class="hidden min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text hover:text-primary md:flex"
         >
           <span class="relative flex">
             <Icon :name="action.icon" size="20" />
@@ -158,15 +148,8 @@ const actions = [
           </span>
           <span class="sr-only xl:not-sr-only">{{ $t(action.labelKey) }}</span>
         </NuxtLink>
-        <button
-          type="button"
-          class="flex size-11 items-center justify-center text-text md:hidden"
-          :aria-label="$t('header.menu')"
-          :aria-expanded="isMenuOpen"
-          @click="isMenuOpen = true"
-        >
-          <Icon name="lucide:menu" size="22" />
-        </button>
+        <!-- Phones: the sections live in the bottom bar, the header keeps the language -->
+        <AppLanguageSwitcher class="md:hidden" />
       </nav>
     </div>
 
@@ -221,47 +204,5 @@ const actions = [
     </nav>
 
     <AppCatalogMenu :id="CATALOG_MENU_ID" v-model="isCatalogOpen" :categories="categories" />
-
-    <ClientOnly>
-      <UiDrawer v-model="isMenuOpen" :title="$t('header.menu')">
-        <nav :aria-label="$t('header.mainNav')" class="flex flex-col">
-          <NuxtLink
-            v-if="auth.isSignedIn"
-            :to="localePath(ROUTES.cabinet)"
-            class="flex min-h-11 items-center gap-3 text-sm font-semibold text-text"
-          >
-            <Icon name="lucide:user" size="20" />
-            {{ $t('cabinet.title') }}
-          </NuxtLink>
-          <button
-            v-else
-            type="button"
-            class="flex min-h-11 items-center gap-3 text-sm font-semibold text-text"
-            @click="openLogin"
-          >
-            <Icon name="lucide:user" size="20" />
-            {{ $t('header.login') }}
-          </button>
-          <NuxtLink
-            :to="localePath(ROUTES.branches)"
-            class="flex min-h-11 items-center text-sm text-text"
-          >
-            {{ $t('header.branches') }}
-          </NuxtLink>
-          <NuxtLink
-            v-for="link in utilityLinks"
-            :key="link.to"
-            :to="localePath(link.to)"
-            class="flex min-h-11 items-center text-sm text-text"
-          >
-            {{ $t(link.labelKey) }}
-          </NuxtLink>
-        </nav>
-        <div class="mt-4 flex items-center gap-2 border-t border-border pt-4 text-sm">
-          <span class="text-text-secondary">{{ $t('header.language') }}:</span>
-          <AppLanguageSwitcher />
-        </div>
-      </UiDrawer>
-    </ClientOnly>
   </header>
 </template>

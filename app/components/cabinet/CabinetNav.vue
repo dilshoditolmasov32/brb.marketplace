@@ -12,6 +12,16 @@ const emit = defineEmits<{ signOut: [] }>()
 
 const localePath = useLocalePath()
 
+// The tab row scrolls sideways on small screens: keep the current section in view
+const tabs = useTemplateRef<HTMLUListElement>('tabs')
+
+onMounted(() => {
+  const list = tabs.value
+  const current = list?.querySelector<HTMLElement>('[aria-current="page"]')
+  if (!list || !current) return
+  list.scrollLeft = current.offsetLeft - (list.clientWidth - current.offsetWidth) / 2
+})
+
 const initials = computed(() =>
   props.name
     .split(/\s+/)
@@ -65,12 +75,13 @@ const initials = computed(() =>
 
     <!-- Tablet and mobile tabs -->
     <ul
-      class="flex gap-1 overflow-x-auto rounded-lg border border-border bg-surface p-1 text-compact whitespace-nowrap lg:hidden"
+      ref="tabs"
+      class="relative flex gap-1 overflow-x-auto rounded-lg border border-border bg-surface p-1 text-compact whitespace-nowrap scrollbar-none lg:hidden [&::-webkit-scrollbar]:hidden"
     >
       <li v-for="item in CABINET_NAV" :key="item.key" class="shrink-0">
         <NuxtLink
           :to="localePath(item.to)"
-          class="flex min-h-9 items-center rounded-sm px-4 font-medium"
+          class="flex min-h-10 items-center rounded-sm px-3 font-medium sm:px-4"
           :class="item.key === active ? 'bg-primary-soft text-primary-hover' : 'text-text'"
           :aria-current="item.key === active ? 'page' : undefined"
         >
@@ -80,7 +91,7 @@ const initials = computed(() =>
       <li class="shrink-0">
         <button
           type="button"
-          class="flex min-h-9 items-center rounded-sm px-4 text-text-secondary transition-colors hover:bg-primary hover:text-on-primary"
+          class="flex min-h-10 items-center rounded-sm px-3 text-text-secondary sm:px-4 transition-colors hover:bg-primary hover:text-on-primary"
           @click="emit('signOut')"
         >
           {{ $t('cabinet.signOut') }}

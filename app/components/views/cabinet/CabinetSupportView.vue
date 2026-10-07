@@ -29,8 +29,8 @@ function send() {
 <template>
   <CabinetShell section="support">
     <CabinetCard>
-      <div class="flex items-start justify-between gap-3">
-        <div class="flex items-center gap-2">
+      <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+        <div class="flex min-w-0 items-center gap-2">
           <Icon name="lucide:shield-check" size="18" class="shrink-0 text-text-secondary" />
           <h2 class="text-base font-semibold text-text">
             {{ $t('cabinet.support.ticket.title') }}
@@ -57,17 +57,24 @@ function send() {
             {{ message.from === 'support' ? $t('cabinet.support.chat.support') : name }}
             · {{ format.dateNumeric(CABINET_SAMPLE.date) }}
           </p>
-          <p class="text-text">{{ message.text }}</p>
+          <p class="wrap-break-word text-text">{{ message.text }}</p>
         </li>
       </ul>
-      <form class="flex flex-col gap-3" @submit.prevent="send">
-        <UiInput
-          v-model="draft"
-          :label="$t('cabinet.support.chat.label')"
-          :placeholder="$t('cabinet.support.chat.placeholder')"
-          autocomplete="off"
-        />
-        <UiButton type="submit" block :disabled="!draft.trim()">
+      <form class="flex flex-col gap-3 sm:flex-row sm:items-end" @submit.prevent="send">
+        <div class="min-w-0 sm:flex-1">
+          <UiInput
+            v-model="draft"
+            :label="$t('cabinet.support.chat.label')"
+            :placeholder="$t('cabinet.support.chat.placeholder')"
+            autocomplete="off"
+          />
+        </div>
+        <UiButton
+          type="submit"
+          block
+          class="sm:w-auto sm:min-w-40 sm:shrink-0"
+          :disabled="!draft.trim()"
+        >
           {{ $t('cabinet.support.chat.send') }}
         </UiButton>
       </form>

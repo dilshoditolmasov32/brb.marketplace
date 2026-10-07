@@ -2,10 +2,7 @@
 @import './tokens.css';
 @import './element-plus.css';
 
-/*
- * Tailwind theme bound to the design tokens.
- * Default palettes, radii and shadows are reset so only token-backed utilities exist.
- */
+
 @theme inline {
   --color-*: initial;
   --color-white: #ffffff;
@@ -21,6 +18,7 @@
   --color-surface-inverse: var(--surface-inverse);
   --color-on-inverse: var(--on-inverse);
   --color-on-inverse-muted: var(--on-inverse-muted);
+  --color-hero-surface: var(--hero-surface);
   --color-hero-card: var(--hero-card);
   --color-hero-tile-1: var(--hero-tile-1);
   --color-hero-tile-2: var(--hero-tile-2);

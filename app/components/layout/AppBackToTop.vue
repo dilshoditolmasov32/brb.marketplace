@@ -18,7 +18,7 @@ const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
     <button
       v-if="isVisible"
       type="button"
-      class="fixed right-4 bottom-4 z-20 flex size-11 items-center justify-center rounded-full bg-primary text-on-primary shadow-overlay hover:bg-primary-hover md:right-6 md:bottom-6 md:size-12"
+      class="fixed right-4 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-20 flex size-11 items-center justify-center rounded-full bg-primary text-on-primary shadow-overlay hover:bg-primary-hover md:right-6 md:bottom-6 md:size-12"
       :aria-label="$t('common.backToTop')"
       :title="$t('common.backToTop')"
       @click="scrollToTop"

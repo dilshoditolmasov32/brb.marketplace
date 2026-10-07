@@ -61,7 +61,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <section v-if="slides.length" class="bg-surface-inverse text-on-inverse">
+  <section v-if="slides.length" class="bg-hero-surface text-on-inverse">
     <div class="container-page grid gap-3 py-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
       <div
         class="relative min-w-0"
@@ -75,7 +75,7 @@ watchEffect(() => {
       >
         <ul
           ref="track"
-          class="flex h-full snap-x snap-mandatory overflow-x-auto rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          class="flex h-full snap-x snap-mandatory overflow-x-auto rounded-lg scrollbar:none [&::-webkit-scrollbar]:hidden"
           @scroll.passive="onScroll"
         >
           <li

@@ -7,7 +7,10 @@
     "close": "Yopish",
     "viewAll": "Barchasini ko‘rish",
     "retry": "Qayta urinish",
-    "backToTop": "Sahifa boshiga qaytish"
+    "backToTop": "Sahifa boshiga qaytish",
+    "sample": "namuna",
+    "sampleTitle": "Namuna ma’lumotlar",
+    "sampleData": "Manzil, telefon va boshqa ma’lumotlar namuna sifatida berilgan. Haqiqiy ma’lumotlar keyin qo‘shiladi."
   },
   "header": {
     "utilityNav": "Yordamchi havolalar",
@@ -162,29 +165,7 @@
     },
     "faq": {
       "title": "Ko‘p so‘raladigan savollar",
-      "subtitle": "Nasiya va xarid bo‘yicha tez-tez so‘raladigan savollar",
-      "items": {
-        "documents": {
-          "question": "Nasiya olish uchun qanday hujjatlar kerak?",
-          "answer": "Shaxsni tasdiqlovchi hujjat, telefon raqami va ariza to‘ldirish kifoya. Ayrim hollarda qo‘shimcha hujjatlar so‘ralishi mumkin."
-        },
-        "limits": {
-          "question": "Minimal va maksimal nasiya summasi qancha?",
-          "answer": "Summa chegaralari mahsulot va ariza natijasiga bog‘liq. Kalkulyatordagi qiymatlar namuna sifatida berilgan."
-        },
-        "accuracy": {
-          "question": "Kalkulyatordagi hisob-kitoblar aniqmi?",
-          "answer": "Kalkulyator dastlabki hisobni ko‘rsatadi. Yakuniy shartlar ariza ko‘rib chiqilgandan keyin belgilanadi."
-        },
-        "early": {
-          "question": "Muddatidan avval to‘lash mumkinmi?",
-          "answer": "Muddatidan avval to‘lash shartlari shartnomada ko‘rsatiladi. Aniq ma’lumot uchun biz bilan bog‘laning."
-        },
-        "returns": {
-          "question": "Mahsulotni qaytarish siyosati qanday?",
-          "answer": "Qaytarish shartlari mahsulot turiga va sotuvchiga bog‘liq. Batafsil ma’lumot mahsulot sahifasida beriladi."
-        }
-      }
+      "subtitle": "Nasiya va xarid bo‘yicha tez-tez so‘raladigan savollar"
     },
     "cta": {
       "title": "Hoziroq xarid qiling, keyin to‘lang",
@@ -650,6 +631,524 @@
     "errors": {
       "tooLarge": "Fayl juda katta. {size} MB gacha bo‘lgan fayl tanlang.",
       "wrongType": "Bu turdagi fayl qabul qilinmaydi. {formats} faylini tanlang."
+    }
+  },
+  "faq": {
+    "title": "Savol-javob",
+    "subtitle": "Nasiya, ariza, to‘lov va yetkazib berish bo‘yicha ko‘p so‘raladigan savollar",
+    "seo": {
+      "description": "BRB savol-javob: nasiya shartlari, ariza berish, to‘lov usullari, yetkazib berish va qaytarish haqida javoblar."
+    },
+    "search": "Savollar ichidan qidirish",
+    "searchPlaceholder": "Masalan: to‘lov",
+    "groupsLabel": "Savol mavzulari",
+    "groups": {
+      "all": "Barchasi",
+      "installment": "Nasiya",
+      "application": "Ariza",
+      "payments": "To‘lovlar",
+      "delivery": "Yetkazib berish"
+    },
+    "empty": {
+      "title": "Savol topilmadi",
+      "description": "Boshqa so‘z bilan qidirib ko‘ring yoki savolingizni bizga yozing."
+    },
+    "contact": {
+      "title": "Javob topa olmadingizmi?",
+      "description": "Savolingizni yozing — mutaxassislarimiz javob beradi."
+    },
+    "items": {
+      "documents": {
+        "question": "Nasiya olish uchun qanday hujjatlar kerak?",
+        "answer": "Shaxsni tasdiqlovchi hujjat, telefon raqami va ariza to‘ldirish kifoya. Ayrim hollarda qo‘shimcha hujjatlar so‘ralishi mumkin."
+      },
+      "limits": {
+        "question": "Minimal va maksimal nasiya summasi qancha?",
+        "answer": "Summa chegaralari mahsulot va ariza natijasiga bog‘liq. Kalkulyatordagi qiymatlar namuna sifatida berilgan."
+      },
+      "accuracy": {
+        "question": "Kalkulyatordagi hisob-kitoblar aniqmi?",
+        "answer": "Kalkulyator dastlabki hisobni ko‘rsatadi. Yakuniy shartlar ariza ko‘rib chiqilgandan keyin belgilanadi."
+      },
+      "early": {
+        "question": "Muddatidan avval to‘lash mumkinmi?",
+        "answer": "Muddatidan avval to‘lash shartlari shartnomada ko‘rsatiladi. Aniq ma’lumot uchun biz bilan bog‘laning."
+      },
+      "returns": {
+        "question": "Mahsulotni qaytarish siyosati qanday?",
+        "answer": "Qaytarish shartlari mahsulot turiga va sotuvchiga bog‘liq. Batafsil ma’lumot mahsulot sahifasida beriladi."
+      },
+      "howToApply": {
+        "question": "Nasiyaga qanday ariza beraman?",
+        "answer": "Mahsulotni tanlang, «Nasiya bilan sotib olish» tugmasini bosing va onlayn arizani to‘ldiring. Ariza bir necha bosqichdan iborat: mahsulot, shaxsiy ma’lumotlar, hujjatlar va tasdiqlash."
+      },
+      "decisionTime": {
+        "question": "Ariza qancha vaqtda ko‘rib chiqiladi?",
+        "answer": "Ko‘rib chiqish muddati ariza va hujjatlarning to‘liqligiga bog‘liq. Natija haqida SMS va shaxsiy kabinet orqali xabar beriladi."
+      },
+      "status": {
+        "question": "Ariza holatini qayerdan ko‘raman?",
+        "answer": "Shaxsiy kabinetdagi «Arizalar» bo‘limida har bir ariza va hujjatning holati ko‘rsatiladi."
+      },
+      "cancel": {
+        "question": "Arizani bekor qilsam bo‘ladimi?",
+        "answer": "Shartnoma imzolanguncha arizani bekor qilish mumkin. Buning uchun kabinetdagi yordam bo‘limiga yoki aloqa markaziga murojaat qiling."
+      },
+      "methods": {
+        "question": "Oylik to‘lovni qanday to‘layman?",
+        "answer": "To‘lov usullari shartnomada ko‘rsatiladi. Odatda to‘lovni bank kartasi, to‘lov ilovalari yoki filial kassasi orqali amalga oshirish mumkin."
+      },
+      "schedule": {
+        "question": "To‘lov jadvalini qayerdan topaman?",
+        "answer": "To‘lov jadvali shartnoma bilan birga beriladi va kabinetdagi «Shartnomalar» bo‘limida ko‘rinadi."
+      },
+      "late": {
+        "question": "To‘lovni kechiktirsam nima bo‘ladi?",
+        "answer": "Kechikish oqibatlari shartnomada belgilanadi. To‘lovni o‘z vaqtida qila olmasangiz, oldindan biz bilan bog‘laning — birgalikda yechim izlaymiz."
+      },
+      "shipping": {
+        "question": "Mahsulot qanday yetkazib beriladi?",
+        "answer": "Yetkazib berish usuli va muddati mahsulot hamda hududga bog‘liq. Aniq ma’lumot mahsulot sahifasida va buyurtmani rasmiylashtirishda ko‘rsatiladi."
+      },
+      "warranty": {
+        "question": "Mahsulotga kafolat beriladimi?",
+        "answer": "Kafolat muddati ishlab chiqaruvchi va sotuvchi tomonidan belgilanadi hamda mahsulot sahifasida ko‘rsatiladi."
+      }
+    }
+  },
+  "forms": {
+    "fullName": "Ism va familiya",
+    "phone": "Telefon raqami",
+    "phoneHint": "Siz bilan bog‘lanish uchun",
+    "email": "Elektron pochta (ixtiyoriy)",
+    "message": "Xabar",
+    "messagePlaceholder": "Savolingiz yoki taklifingizni yozing",
+    "consent": "Shaxsiy ma’lumotlarimni qayta ishlashga roziman. Maxfiylik siyosati bilan tanishdim.",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda…",
+    "again": "Yana yuborish",
+    "sampleNote": "Namuna shakl: ma’lumotlar hech qayerga yuborilmaydi va saqlanmaydi.",
+    "sent": {
+      "title": "Qabul qilindi · namuna",
+      "description": "Server ulanmaguncha murojaatlar yuborilmaydi. Kiritilgan ma’lumotlar hech qayerda saqlanmadi."
+    },
+    "errors": {
+      "fullName": "Ism va familiyani to‘liq kiriting.",
+      "phone": "Telefon raqamini +998 90 123 45 67 ko‘rinishida kiriting.",
+      "email": "Elektron pochta manzili noto‘g‘ri.",
+      "message": "Xabar kamida 10 ta belgidan iborat bo‘lsin.",
+      "consent": "Davom etish uchun rozilik bering.",
+      "company": "Tashkilot nomini kiriting.",
+      "topic": "Murojaat mavzusini tanlang.",
+      "category": "Faoliyat turini tanlang.",
+      "vacancy": "Vakansiyani tanlang."
+    }
+  },
+  "about": {
+    "title": "Tashkilot haqida",
+    "subtitle": "BRB Mikromoliya tashkiloti — nasiyaga xarid va moliyaviy xizmatlar",
+    "seo": {
+      "description": "BRB Mikromoliya tashkiloti haqida: maqsadimiz, tamoyillarimiz, xizmat shartlari va rasmiy ma’lumotlar."
+    },
+    "lead": {
+      "title": "Kerakli narsani bugun oling, to‘lovni qulay muddatga bo‘ling",
+      "text": "BRB mahsulotlarni nasiyaga xarid qilishni soddalashtiradi: mahsulotni tanlaysiz, oylik to‘lovni kalkulyatorda ko‘rasiz va arizani onlayn berasiz. Quyidagi raqamlar namuna sifatida ko‘rsatilgan."
+    },
+    "stats": {
+      "maxAmount": "Maksimal summa (namuna)",
+      "branches": "Filiallar (namuna)"
+    },
+    "mission": {
+      "title": "Maqsadimiz",
+      "text": "Har bir oilaga zarur buyumlarni ortiqcha qog‘ozbozliksiz va tushunarli shartlar bilan xarid qilish imkonini berish. Biz shartlarni oldindan ochiq ko‘rsatamiz, toki siz qarorni to‘liq ma’lumot asosida qabul qiling."
+    },
+    "values": {
+      "title": "Tamoyillarimiz",
+      "subtitle": "Mijozlar bilan ishlashda nimalarga tayanamiz",
+      "items": {
+        "transparency": {
+          "title": "Ochiqlik",
+          "description": "Stavka, muddat va jami to‘lov ariza berishdan oldin ko‘rsatiladi."
+        },
+        "speed": {
+          "title": "Tezkorlik",
+          "description": "Ariza onlayn to‘ldiriladi, holati esa kabinetda kuzatiladi."
+        },
+        "accessibility": {
+          "title": "Qulaylik",
+          "description": "To‘lov muddatini o‘z imkoniyatingizga qarab tanlaysiz."
+        },
+        "security": {
+          "title": "Xavfsizlik",
+          "description": "Shaxsiy ma’lumotlar faqat xizmat ko‘rsatish uchun ishlatiladi."
+        }
+      }
+    },
+    "details": {
+      "title": "Rasmiy ma’lumotlar",
+      "name": "To‘liq nomi",
+      "license": "Litsenziya",
+      "licenseValue": "Raqami va sanasi keyin qo‘shiladi",
+      "address": "Manzil",
+      "email": "Elektron pochta"
+    }
+  },
+  "branches": {
+    "title": "Filiallar",
+    "subtitle": "Sizga yaqin filialni toping: manzil, ish vaqti va xizmatlar",
+    "seo": {
+      "description": "BRB filiallari: manzillar, ish vaqti, telefon raqamlari va ko‘rsatiladigan xizmatlar."
+    },
+    "region": "Hudud",
+    "allRegions": "Barcha hududlar",
+    "count": "{count} ta filial",
+    "address": "Manzil",
+    "hours": "Ish vaqti",
+    "hoursValue": "Dushanba–shanba · 09:00–18:00",
+    "servicesLabel": "Xizmatlar",
+    "services": {
+      "applications": "Ariza qabul qilish",
+      "payments": "To‘lov qabul qilish",
+      "consulting": "Maslahat"
+    },
+    "regions": {
+      "tashkent": "Toshkent",
+      "samarkand": "Samarqand",
+      "bukhara": "Buxoro",
+      "fergana": "Farg‘ona",
+      "andijan": "Andijon",
+      "namangan": "Namangan"
+    },
+    "items": {
+      "tashkentCenter": {
+        "name": "Bosh ofis",
+        "address": "Toshkent sh., Amir Temur shoh ko‘chasi, 00-uy"
+      },
+      "tashkentChilanzar": {
+        "name": "Chilonzor filiali",
+        "address": "Toshkent sh., Chilonzor tumani, Bunyodkor shoh ko‘chasi, 00-uy"
+      },
+      "samarkand": {
+        "name": "Samarqand filiali",
+        "address": "Samarqand sh., Registon ko‘chasi, 00-uy"
+      },
+      "bukhara": {
+        "name": "Buxoro filiali",
+        "address": "Buxoro sh., Mustaqillik ko‘chasi, 00-uy"
+      },
+      "fergana": {
+        "name": "Farg‘ona filiali",
+        "address": "Farg‘ona sh., Mustaqillik ko‘chasi, 00-uy"
+      },
+      "andijan": {
+        "name": "Andijon filiali",
+        "address": "Andijon sh., Navoiy shoh ko‘chasi, 00-uy"
+      },
+      "namangan": {
+        "name": "Namangan filiali",
+        "address": "Namangan sh., Navoiy ko‘chasi, 00-uy"
+      }
+    },
+    "online": {
+      "title": "Filialga borish shart emas",
+      "description": "Mahsulotni tanlang va arizani onlayn bering — holatini kabinetda kuzatasiz."
+    }
+  },
+  "careers": {
+    "title": "Vakansiyalar",
+    "subtitle": "BRB jamoasiga qo‘shiling va moliyaviy xizmatlarni birga qulayroq qilaylik",
+    "seo": {
+      "description": "BRB Mikromoliya tashkilotidagi ochiq vakansiyalar va rezyume yuborish shakli."
+    },
+    "benefits": {
+      "title": "Nega BRB?",
+      "items": {
+        "growth": {
+          "title": "Kasbiy o‘sish",
+          "description": "Ichki o‘quv dasturlari va tajribali hamkasblar ko‘magi."
+        },
+        "stability": {
+          "title": "Barqaror daromad",
+          "description": "Rasmiy ishga qabul qilish va o‘z vaqtida to‘lanadigan maosh."
+        },
+        "team": {
+          "title": "Ahil jamoa",
+          "description": "Fikringiz tinglanadigan va tashabbus qo‘llab-quvvatlanadigan muhit."
+        },
+        "flexibility": {
+          "title": "Qulay grafik",
+          "description": "Ayrim lavozimlarda gibrid ish tartibi mavjud."
+        }
+      }
+    },
+    "vacancies": {
+      "title": "Ochiq vakansiyalar",
+      "count": "{count} ta vakansiya · namuna",
+      "duties": "Vazifalar",
+      "requirements": "Talablar",
+      "apply": "Shu vakansiyaga ariza berish"
+    },
+    "departments": {
+      "credit": "Kredit bo‘limi",
+      "support": "Mijozlarga xizmat",
+      "it": "IT",
+      "branches": "Filiallar"
+    },
+    "employment": {
+      "fullTime": "To‘liq ish kuni",
+      "hybrid": "Gibrid"
+    },
+    "items": {
+      "creditSpecialist": {
+        "title": "Kredit mutaxassisi",
+        "duties": "Arizalarni ko‘rib chiqish, mijozlarga nasiya shartlari bo‘yicha maslahat berish va hujjatlarni rasmiylashtirish.",
+        "requirements": "Oliy yoki tugallanmagan oliy ma’lumot, o‘zbek va rus tillarini bilish, mijozlar bilan ishlash tajribasi afzallik."
+      },
+      "supportOperator": {
+        "title": "Aloqa markazi operatori",
+        "duties": "Telefon va chat orqali mijozlar savollariga javob berish, murojaatlarni ro‘yxatga olish va kuzatish.",
+        "requirements": "Ravon va savodli nutq, kompyuterda ishlash ko‘nikmasi, sabr-toqat va e’tiborlilik."
+      },
+      "frontendDeveloper": {
+        "title": "Frontend dasturchi",
+        "duties": "Marketplace va shaxsiy kabinet interfeyslarini ishlab chiqish, dizayn tizimini qo‘llab-quvvatlash.",
+        "requirements": "Vue 3 va TypeScript bo‘yicha 2 yildan ortiq tajriba, Nuxt va Tailwind CSS bilan ishlash ko‘nikmasi."
+      },
+      "branchManager": {
+        "title": "Filial rahbari",
+        "duties": "Filial ishini tashkil etish, xizmat sifatini nazorat qilish va jamoani boshqarish.",
+        "requirements": "Moliya sohasida 3 yildan ortiq tajriba, boshqaruv ko‘nikmalari, hudud bozorini bilish."
+      }
+    },
+    "form": {
+      "title": "Rezyume yuborish",
+      "subtitle": "Vakansiyani tanlang va ma’lumotlaringizni qoldiring — siz bilan bog‘lanamiz.",
+      "vacancy": "Vakansiya",
+      "vacancyPlaceholder": "Vakansiyani tanlang",
+      "cv": "Rezyume (ixtiyoriy)",
+      "about": "O‘zingiz haqingizda (ixtiyoriy)",
+      "aboutPlaceholder": "Tajribangiz va nima uchun BRB’da ishlamoqchi ekaningiz haqida qisqacha"
+    }
+  },
+  "contacts": {
+    "title": "Biz bilan bog‘lanish",
+    "subtitle": "Savol, taklif yoki shikoyatingiz bo‘lsa — qulay usulda murojaat qiling",
+    "seo": {
+      "description": "BRB bilan bog‘lanish: telefon, elektron pochta, bosh ofis manzili va murojaat shakli."
+    },
+    "channels": {
+      "phone": {
+        "title": "Telefon",
+        "note": "Qo‘ng‘iroqlar ish vaqtida qabul qilinadi"
+      },
+      "email": {
+        "title": "Elektron pochta",
+        "note": "Bir ish kuni ichida javob beramiz"
+      },
+      "office": {
+        "title": "Bosh ofis",
+        "value": "Toshkent sh., Amir Temur shoh ko‘chasi, 00-uy",
+        "note": "Barcha filiallar «Filiallar» sahifasida"
+      },
+      "hours": {
+        "title": "Ish vaqti",
+        "note": "Yakshanba — dam olish kuni"
+      }
+    },
+    "form": {
+      "title": "Xabar yuborish",
+      "subtitle": "Shaklni to‘ldiring — mutaxassisimiz siz bilan bog‘lanadi.",
+      "topic": "Murojaat mavzusi",
+      "topicPlaceholder": "Mavzuni tanlang",
+      "topics": {
+        "installment": "Nasiya va ariza",
+        "payment": "To‘lov",
+        "order": "Buyurtma va yetkazib berish",
+        "partnership": "Hamkorlik",
+        "other": "Boshqa"
+      }
+    },
+    "links": {
+      "title": "Tezkor yordam",
+      "faq": {
+        "title": "Savol-javob",
+        "description": "Ko‘p so‘raladigan savollarga javoblar"
+      },
+      "branches": {
+        "title": "Filiallar",
+        "description": "Manzillar va ish vaqti"
+      },
+      "cabinet": {
+        "title": "Kabinetdagi yordam",
+        "description": "Ariza va shartnoma bo‘yicha murojaat"
+      }
+    }
+  },
+  "partners": {
+    "title": "BRB bilan ishlash",
+    "subtitle": "Mahsulotlaringizni BRB marketplace’ida nasiyaga taklif qiling va yangi xaridorlarga ega bo‘ling. Hamkorlik shartlari har bir sotuvchi bilan alohida kelishiladi.",
+    "seo": {
+      "description": "Tadbirkorlar uchun: BRB marketplace’ida mahsulotlarni nasiyaga sotish, hamkorlik bosqichlari va ariza shakli."
+    },
+    "benefits": {
+      "title": "Hamkorlarga nima beramiz",
+      "items": {
+        "sales": {
+          "title": "Savdo o‘sishi",
+          "description": "Nasiya imkoniyati xaridorga qimmatroq mahsulotni tanlashni osonlashtiradi."
+        },
+        "audience": {
+          "title": "Yangi xaridorlar",
+          "description": "Mahsulotlaringiz BRB mijozlariga katalog orqali ko‘rsatiladi."
+        },
+        "online": {
+          "title": "Onlayn vitrina",
+          "description": "Alohida sayt qurmasdan mahsulotlarni internetda sotasiz."
+        },
+        "support": {
+          "title": "Hamkorlar xizmati",
+          "description": "Mahsulot joylash va buyurtmalar bo‘yicha yordam beramiz."
+        }
+      }
+    },
+    "steps": {
+      "title": "Hamkorlik qanday boshlanadi",
+      "items": {
+        "request": {
+          "title": "Ariza qoldiring",
+          "description": "Tashkilotingiz va mahsulotlaringiz haqida qisqacha yozing."
+        },
+        "review": {
+          "title": "Ko‘rib chiqamiz",
+          "description": "Mutaxassisimiz siz bilan bog‘lanib, tafsilotlarni aniqlashtiradi."
+        },
+        "contract": {
+          "title": "Shartnoma tuzamiz",
+          "description": "Hamkorlik shartlari kelishilgach, shartnoma imzolanadi."
+        },
+        "start": {
+          "title": "Sotishni boshlaysiz",
+          "description": "Mahsulotlar katalogga joylanadi va xaridorlarga ochiladi."
+        }
+      }
+    },
+    "requirements": {
+      "title": "Hamkorga talablar",
+      "items": {
+        "registered": "Yuridik shaxs yoki yakka tartibdagi tadbirkor sifatida ro‘yxatdan o‘tgan bo‘lish",
+        "goods": "Sifatli va qonuniy mahsulotlarni sotish",
+        "documents": "Mahsulot uchun zarur hujjat va sertifikatlarga ega bo‘lish",
+        "service": "Kafolat va qaytarish bo‘yicha majburiyatlarni bajarish"
+      },
+      "note": "Ro‘yxat namuna. Aniq talablar shartnomada belgilanadi."
+    },
+    "form": {
+      "title": "Hamkorlik arizasi",
+      "subtitle": "Ma’lumotlarni qoldiring — hamkorlar bo‘limi siz bilan bog‘lanadi.",
+      "company": "Tashkilot nomi",
+      "category": "Faoliyat turi",
+      "categoryPlaceholder": "Faoliyat turini tanlang",
+      "categories": {
+        "electronics": "Elektronika",
+        "appliances": "Maishiy texnika",
+        "furniture": "Mebel va uy jihozlari",
+        "fashion": "Kiyim va aksessuarlar",
+        "other": "Boshqa"
+      },
+      "contactPerson": "Mas’ul shaxs",
+      "message": "Qo‘shimcha ma’lumot (ixtiyoriy)",
+      "messagePlaceholder": "Mahsulotlar turi, do‘konlar soni va boshqa ma’lumotlar"
+    }
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "seo": {
+      "description": "BRB yangiliklari va maslahatlari: moliyaviy savodxonlik, nasiya va yangi mahsulotlar haqida."
+    },
+    "total": "{count} ta maqola",
+    "views": "{count} marta ko‘rilgan",
+    "likes": "{count} ta yoqtirish",
+    "back": "Barcha yangiliklar",
+    "related": "Boshqa yangiliklar",
+    "sampleNote": "Maqolalar namuna: matn va rasmlar vaqtinchalik sinov manbasidan olingan.",
+    "empty": {
+      "title": "Hozircha yangilik yo‘q",
+      "description": "Tez orada bu yerda yangi maqolalar paydo bo‘ladi."
+    }
+  },
+  "legal": {
+    "contents": "Mundarija",
+    "sample": {
+      "title": "Namuna matn",
+      "description": "Hujjat matni yuridik ekspertizadan o‘tmagan va rasmiy kuchga ega emas. Yakuniy tahrir keyin joylanadi."
+    },
+    "privacy": {
+      "title": "Maxfiylik kelishuvi",
+      "intro": "BRB foydalanuvchilarning shaxsiy ma’lumotlarini qanday to‘plashi, ishlatishi va himoya qilishi haqida.",
+      "sections": {
+        "general": {
+          "title": "Umumiy qoidalar",
+          "body": "Ushbu kelishuv BRB sayti va xizmatlaridan foydalanishda shaxsiy ma’lumotlarni qayta ishlash tartibini belgilaydi. Saytdan foydalanish orqali siz ushbu shartlarga rozilik bildirasiz."
+        },
+        "data": {
+          "title": "Qanday ma’lumotlar to‘planadi",
+          "body": "Ro‘yxatdan o‘tish va ariza berishda ism-familiya, telefon raqami, elektron pochta, shaxsni tasdiqlovchi hujjat ma’lumotlari hamda buyurtma va to‘lovlarga oid ma’lumotlar to‘planadi."
+        },
+        "purposes": {
+          "title": "Ma’lumotlardan foydalanish maqsadlari",
+          "body": "Ma’lumotlar arizani ko‘rib chiqish, shartnoma tuzish va bajarish, buyurtmani yetkazib berish, siz bilan bog‘lanish hamda xizmat sifatini yaxshilash uchun ishlatiladi."
+        },
+        "storage": {
+          "title": "Saqlash va himoya",
+          "body": "Ma’lumotlar himoyalangan serverlarda saqlanadi va ularga faqat vakolatli xodimlar kira oladi. Saqlash muddati qonunchilik va shartnoma talablari bilan belgilanadi."
+        },
+        "sharing": {
+          "title": "Uchinchi shaxslarga berish",
+          "body": "Ma’lumotlar faqat xizmat ko‘rsatish uchun zarur hollarda — masalan, yetkazib berish xizmati yoki to‘lov tashkilotiga — hamda qonunchilikda nazarda tutilgan hollarda beriladi."
+        },
+        "rights": {
+          "title": "Foydalanuvchi huquqlari",
+          "body": "Siz o‘z ma’lumotlaringiz bilan tanishish, ularni tuzatish yoki o‘chirishni so‘rash hamda qayta ishlashga bergan roziligingizni qaytarib olish huquqiga egasiz."
+        },
+        "cookies": {
+          "title": "Cookie fayllari",
+          "body": "Sayt tanlangan til, savat va saralangan mahsulotlarni eslab qolish uchun cookie va brauzer xotirasidan foydalanadi. Ularni brauzer sozlamalarida o‘chirib qo‘yishingiz mumkin."
+        }
+      }
+    },
+    "terms": {
+      "title": "Foydalanuvchi kelishuvi",
+      "intro": "BRB sayti va xizmatlaridan foydalanish qoidalari.",
+      "sections": {
+        "general": {
+          "title": "Umumiy qoidalar",
+          "body": "Ushbu kelishuv BRB va sayt foydalanuvchisi o‘rtasidagi munosabatlarni tartibga soladi. Saytdan foydalanishni boshlash orqali siz kelishuv shartlarini qabul qilasiz."
+        },
+        "account": {
+          "title": "Ro‘yxatdan o‘tish va hisob",
+          "body": "Hisob ochishda to‘g‘ri va dolzarb ma’lumot kiritish kerak. Hisobingizga kirish ma’lumotlarining maxfiyligi uchun o‘zingiz javob berasiz."
+        },
+        "orders": {
+          "title": "Buyurtmalar",
+          "body": "Saytdagi mahsulot tavsifi, narxi va mavjudligi ma’lumot uchun berilgan va o‘zgarishi mumkin. Buyurtma tasdiqlangandan keyingina rasmiylashtirilgan hisoblanadi."
+        },
+        "installment": {
+          "title": "Nasiya shartlari",
+          "body": "Kalkulyator va mahsulot sahifasidagi hisob-kitoblar dastlabki hisoblanadi. Yakuniy stavka, muddat va to‘lov jadvali ariza ko‘rib chiqilgach shartnomada belgilanadi."
+        },
+        "payments": {
+          "title": "To‘lovlar",
+          "body": "To‘lovlar shartnomadagi jadval bo‘yicha amalga oshiriladi. To‘lov kechiktirilganda shartnomada nazarda tutilgan choralar qo‘llanadi."
+        },
+        "delivery": {
+          "title": "Yetkazib berish va qaytarish",
+          "body": "Yetkazib berish muddati va usuli buyurtmani rasmiylashtirishda ko‘rsatiladi. Mahsulotni qaytarish amaldagi qonunchilik va sotuvchi shartlariga muvofiq amalga oshiriladi."
+        },
+        "liability": {
+          "title": "Javobgarlik va o‘zgartirishlar",
+          "body": "BRB texnik uzilishlar tufayli xizmat vaqtincha ishlamay qolishi uchun javobgar emas. Kelishuv matni yangilanishi mumkin; yangi tahrir saytga joylangan paytdan kuchga kiradi."
+        }
+      }
     }
   }
 }

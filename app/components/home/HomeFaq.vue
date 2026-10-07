@@ -1,36 +1,18 @@
 <script setup lang="ts">
-const FAQ_KEYS = ['documents', 'limits', 'accuracy', 'early', 'returns'] as const
-
 const { t } = useI18n()
+const localePath = useLocalePath()
 
-const openKey = ref<string | null>(FAQ_KEYS[0])
+const openKey = ref<string | null>(HOME_FAQ_ITEMS[0])
 
 const items = computed(() =>
-  FAQ_KEYS.map((key) => ({
+  HOME_FAQ_ITEMS.map((key) => ({
     key,
-    question: t(`home.faq.items.${key}.question`),
-    answer: t(`home.faq.items.${key}.answer`),
+    question: t(`faq.items.${key}.question`),
+    answer: t(`faq.items.${key}.answer`),
   })),
 )
 
-// Structured data so search engines can show the questions directly
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: () =>
-        JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: items.value.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: { '@type': 'Answer', text: item.answer },
-          })),
-        }),
-    },
-  ],
-})
+useFaqStructuredData(items)
 </script>
 
 <template>
@@ -50,6 +32,11 @@ useHead({
         >
           {{ item.answer }}
         </UiAccordion>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <UiButton variant="outline" :to="localePath(ROUTES.faq)">
+          {{ $t('common.viewAll') }}
+        </UiButton>
       </div>
     </div>
   </section>

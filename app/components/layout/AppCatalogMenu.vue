@@ -34,7 +34,7 @@ onBeforeUnmount(() => (isLocked.value = false))
       :id="id"
       class="absolute inset-x-0 top-full z-10 h-[calc(100dvh-var(--header-height,0px))] overflow-y-auto overscroll-contain border-t border-border bg-surface shadow-overlay"
     >
-      <nav :aria-label="$t('header.catalog')" class="container-page py-6">
+      <nav :aria-label="$t('header.catalog')" class="container-page pt-6 pb-24 md:pb-6">
         <div class="flex items-center justify-between gap-4">
           <h2 class="text-lg font-semibold text-text">{{ $t('header.catalog') }}</h2>
           <NuxtLink

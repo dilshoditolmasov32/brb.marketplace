@@ -40,7 +40,7 @@ const schedule = computed(() => {
             class="flex justify-between gap-4 border-t border-border py-2"
           >
             <dt class="text-text-secondary">{{ row.label }}</dt>
-            <dd class="font-semibold text-text tabular-nums">{{ row.value }}</dd>
+            <dd class="text-right font-semibold text-text tabular-nums">{{ row.value }}</dd>
           </div>
         </dl>
         <p class="text-2xs text-text-secondary">
@@ -66,39 +66,44 @@ const schedule = computed(() => {
           }}
         </p>
         <div class="overflow-x-auto">
-          <table class="w-full min-w-96 text-left text-compact">
+          <table class="w-full text-left text-compact">
             <thead class="bg-surface-muted text-text">
               <tr>
-                <th scope="col" class="px-3 py-2.5 font-semibold">
+                <th scope="col" class="px-2 py-2.5 font-semibold sm:px-3">
                   {{ $t('cabinet.contracts.schedule.date') }}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-semibold">
+                <th scope="col" class="px-2 py-2.5 font-semibold sm:px-3">
                   {{ $t('cabinet.contracts.schedule.payment') }}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-semibold">
+                <th scope="col" class="px-2 py-2.5 font-semibold sm:px-3">
                   {{ $t('cabinet.contracts.schedule.state') }}
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="row in schedule" :key="row.date.getTime()" class="border-b border-border">
-                <td class="px-3 py-3 text-text tabular-nums">
+                <td class="px-2 py-3 whitespace-nowrap text-text tabular-nums sm:px-3">
                   {{ format.dateNumeric(row.date) }}
                 </td>
-                <td class="px-3 py-3 font-semibold text-text tabular-nums">
+                <td
+                  class="px-2 py-3 font-semibold whitespace-nowrap text-text tabular-nums sm:px-3"
+                >
                   {{ format.currency(row.amount) }}
                 </td>
-                <td class="px-3 py-3 text-text-secondary">
+                <td class="px-2 py-3 text-text-secondary sm:px-3">
                   {{ $t('cabinet.contracts.schedule.pending') }}
                 </td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <th scope="row" class="px-3 py-3 font-normal text-text-secondary">
+                <th scope="row" class="px-2 py-3 font-normal text-text-secondary sm:px-3">
                   {{ $t('cabinet.contracts.schedule.total') }}
                 </th>
-                <td class="px-3 py-3 font-semibold text-text tabular-nums" colspan="2">
+                <td
+                  class="px-2 py-3 font-semibold whitespace-nowrap text-text tabular-nums sm:px-3"
+                  colspan="2"
+                >
                   {{ format.currency(loan.totalPayment) }}
                 </td>
               </tr>

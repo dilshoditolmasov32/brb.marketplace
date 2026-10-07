@@ -45,14 +45,14 @@ const dayAndMonth = (date: string) => format.dateNumeric(date).slice(0, 5)
       <UiTabs v-model="filter" :tabs="tabs" :label="$t('cabinet.titles.applications')" />
 
       <CabinetCard v-if="showsMain">
-        <h2 class="text-base font-semibold text-text">
+        <h2 class="text-base font-semibold wrap-break-word text-text">
           {{ CABINET_SAMPLE.applicationNumber }} · {{ $t('cabinet.applications.main') }}
         </h2>
         <UiBadge tone="success" class="self-start">{{ $t('cabinet.application.status') }}</UiBadge>
         <p class="text-compact text-text">
           {{ name }} · {{ product.title }} · {{ format.currency(product.price) }}
         </p>
-        <div class="flex justify-between gap-4 text-compact">
+        <div class="flex flex-wrap justify-between gap-x-4 gap-y-1 text-compact">
           <span class="text-text-secondary">{{ $t('cabinet.applications.monthlyAndTerm') }}</span>
           <span class="font-semibold text-text tabular-nums">
             {{ format.currency(loan.monthlyPayment) }} /
@@ -90,8 +90,10 @@ const dayAndMonth = (date: string) => format.dateNumeric(date).slice(0, 5)
             :key="item.number"
             class="flex flex-col gap-1 border-t border-border py-3 first:border-t-0 first:pt-0 last:pb-0"
           >
-            <div class="flex items-baseline justify-between gap-3 text-compact">
-              <p class="text-text-secondary">{{ item.number }} · {{ product.title }}</p>
+            <div
+              class="flex flex-col gap-0.5 text-compact sm:flex-row sm:items-baseline sm:justify-between sm:gap-3"
+            >
+              <p class="min-w-0 text-text-secondary">{{ item.number }} · {{ product.title }}</p>
               <p class="shrink-0 font-semibold text-text">
                 {{ $t(`cabinet.applications.statuses.${item.status}.label`) }}
               </p>

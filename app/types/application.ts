@@ -6,12 +6,11 @@ export interface ApplicationPersonalData {
   documentNumber: string
   phone: string
   email: string
-  /** Copy of the identity document; kept in memory only */
   document: File | null
   consent: boolean
 }
 
-/** A product being financed together with its quantity */
+
 export interface ApplicationItem {
   product: CatalogProduct
   quantity: number

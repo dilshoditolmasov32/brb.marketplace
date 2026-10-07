@@ -92,6 +92,15 @@ docs/               arxitektura va biznes logika hujjatlari
 | `/cart`               | `pages/cart.vue`           | `views/cart/CartView.vue`               |
 | `/favorites`          | `pages/favorites.vue`      | `views/favorites/FavoritesView.vue`     |
 | `/search`             | `pages/search.vue`         | `views/search/SearchView.vue`           |
+| `/news`               | `pages/news/index.vue`     | `views/news/NewsView.vue`               |
+| `/news/[id]`          | `pages/news/[id].vue`      | `views/news/NewsDetailView.vue`         |
+| `/about`              | `pages/about.vue`          | `views/about/AboutView.vue`             |
+| `/branches`           | `pages/branches.vue`       | `views/branches/BranchesView.vue`       |
+| `/careers`            | `pages/careers.vue`        | `views/careers/CareersView.vue`         |
+| `/contacts`           | `pages/contacts.vue`       | `views/contacts/ContactsView.vue`       |
+| `/faq`                | `pages/faq.vue`            | `views/faq/FaqView.vue`                 |
+| `/partners`           | `pages/partners.vue`       | `views/partners/PartnersView.vue`       |
+| `/privacy`, `/terms`  | `pages/privacy.vue` ...    | `views/legal/LegalDocumentView.vue`     |
 | `/dev/ui`             | `pages/dev/ui.vue`         | `views/dev/DevUiView.vue`               |
 
 Bog'lanish yo'nalishi: `pages → components/views → components → composables → api / utils`.

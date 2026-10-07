@@ -18,11 +18,11 @@ const stats = computed(() => [
 
 <template>
   <CabinetShell section="overview" :title="$t('cabinet.greeting', { name: firstName })">
-    <dl class="grid gap-3 sm:grid-cols-3">
+    <dl class="grid grid-cols-1 gap-3 sm:grid-cols-3">
       <div
         v-for="stat in stats"
         :key="stat.label"
-        class="flex flex-col gap-1 rounded-lg border border-border bg-surface p-4"
+        class="flex items-center justify-between gap-3 rounded-lg border border-border bg-surface px-4 py-3 sm:flex-col sm:items-start sm:justify-start sm:gap-1 sm:p-4"
       >
         <dt class="text-compact text-text-secondary">{{ stat.label }}</dt>
         <dd class="text-xl font-semibold text-text tabular-nums">{{ stat.value }}</dd>
@@ -32,10 +32,10 @@ const stats = computed(() => [
     <template v-if="product">
       <ApplicationProductList :items="[{ product, quantity: 1 }]" />
 
-      <div class="grid gap-4 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <CabinetCard :title="$t('cabinet.payment.title')">
           <UiBadge tone="success" class="self-start">{{ $t('cabinet.payment.status') }}</UiBadge>
-          <p class="text-2xl font-semibold text-text tabular-nums">
+          <p class="text-xl font-semibold text-text tabular-nums md:text-2xl">
             {{ format.currency(loan.monthlyPayment) }}
           </p>
           <p class="text-2xs text-text-secondary">
@@ -44,11 +44,13 @@ const stats = computed(() => [
           <dl class="flex flex-col text-compact">
             <div class="flex justify-between gap-4 border-t border-border py-2">
               <dt class="text-text-secondary">{{ $t('cabinet.payment.contract') }}</dt>
-              <dd class="font-semibold text-text">{{ CABINET_SAMPLE.contractNumber }}</dd>
+              <dd class="text-right font-semibold text-text">
+                {{ CABINET_SAMPLE.contractNumber }}
+              </dd>
             </div>
             <div class="flex justify-between gap-4 border-t border-border py-2">
               <dt class="text-text-secondary">{{ $t('cabinet.payment.remaining') }}</dt>
-              <dd class="font-semibold text-text tabular-nums">
+              <dd class="text-right font-semibold text-text tabular-nums">
                 {{ format.currency(loan.totalPayment) }}
               </dd>
             </div>
@@ -62,7 +64,9 @@ const stats = computed(() => [
           <UiBadge tone="success" class="self-start">
             {{ $t('cabinet.application.status') }}
           </UiBadge>
-          <p class="text-lg font-semibold text-text">{{ CABINET_SAMPLE.applicationNumber }}</p>
+          <p class="text-lg font-semibold wrap-break-word text-text">
+            {{ CABINET_SAMPLE.applicationNumber }}
+          </p>
           <p class="text-compact text-text">{{ product.title }}</p>
           <p class="text-2xs text-text-secondary">
             {{ format.date(CABINET_SAMPLE.date) }} · {{ $t('cabinet.application.note') }}
@@ -84,7 +88,7 @@ const stats = computed(() => [
       <CabinetNotificationItem :item="latestNotification" />
     </section>
 
-    <div class="grid gap-3 sm:grid-cols-3">
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
       <UiButton variant="outline" block :to="localePath(ROUTES.cabinetProfile)">
         {{ $t('cabinet.nav.profile') }}
       </UiButton>
@@ -98,7 +102,7 @@ const stats = computed(() => [
 
     <section v-if="recommended.length" class="flex flex-col gap-3">
       <h2 class="text-base font-semibold text-text">{{ $t('cabinet.overview.recommended') }}</h2>
-      <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+      <ul class="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-3">
         <li v-for="item in recommended" :key="item.id">
           <ProductCard :product="item" class="h-full" />
         </li>

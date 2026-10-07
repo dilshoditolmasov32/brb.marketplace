@@ -58,13 +58,20 @@ useSeoMeta({ title: () => t(`cabinet.titles.${props.section}`) })
 
       <div
         v-else
-        class="mt-4 grid gap-4 lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-start lg:gap-6"
+        class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-start lg:gap-6"
       >
-        <CabinetNav :name="name" :active="section" @sign-out="isSignOutOpen = true" />
+        <CabinetNav
+          class="min-w-0"
+          :name="name"
+          :active="section"
+          @sign-out="isSignOutOpen = true"
+        />
 
         <div class="flex min-w-0 flex-col gap-4">
           <div>
-            <h1 class="text-2xl font-semibold text-text">{{ heading }}</h1>
+            <h1 class="text-xl font-semibold wrap-break-word text-text md:text-2xl">
+              {{ heading }}
+            </h1>
             <p class="mt-1 text-compact text-text-secondary">
               {{ format.date(CABINET_SAMPLE.date) }} · {{ $t('cabinet.sampleNote') }}
             </p>

@@ -54,6 +54,15 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  // Nuxt 4.6 on Windows: Nitro sees the renderer under a backslash path, misses its own
+  // "nuxt/dist" inline rule and externalises it, so dev SSR fails with
+  // "Either manifest or precomputed data must be provided"
+  nitro: {
+    externals: {
+      inline: [/[\\/]nuxt[\\/]dist[\\/]/],
+    },
+  },
+
   typescript: {
     strict: true,
   },

@@ -7,7 +7,10 @@
     "close": "Close",
     "viewAll": "View all",
     "retry": "Try again",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "sample": "sample",
+    "sampleTitle": "Sample data",
+    "sampleData": "Addresses, phone numbers and other details are shown as a sample. The real data will be added later."
   },
   "header": {
     "utilityNav": "Utility links",
@@ -162,29 +165,7 @@
     },
     "faq": {
       "title": "Frequently asked questions",
-      "subtitle": "Common questions about installments and shopping",
-      "items": {
-        "documents": {
-          "question": "What documents do I need for an installment plan?",
-          "answer": "An identity document, a phone number and a completed application are enough. Additional documents may be requested in some cases."
-        },
-        "limits": {
-          "question": "What are the minimum and maximum amounts?",
-          "answer": "The limits depend on the product and the outcome of your application. The values in the calculator are examples."
-        },
-        "accuracy": {
-          "question": "Are the calculator results exact?",
-          "answer": "The calculator shows a preliminary estimate. Final terms are set after your application is reviewed."
-        },
-        "early": {
-          "question": "Can I repay early?",
-          "answer": "Early repayment terms are stated in the contract. Contact us for exact information."
-        },
-        "returns": {
-          "question": "What is the return policy?",
-          "answer": "Return terms depend on the product type and the seller. Details are given on the product page."
-        }
-      }
+      "subtitle": "Common questions about installments and shopping"
     },
     "cta": {
       "title": "Buy now, pay later",
@@ -650,6 +631,524 @@
     "errors": {
       "tooLarge": "The file is too large. Choose a file up to {size} MB.",
       "wrongType": "This file type is not accepted. Choose a {formats} file."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Frequently asked questions about installments, applications, payments and delivery",
+    "seo": {
+      "description": "BRB FAQ: installment terms, applying, payment methods, delivery and returns."
+    },
+    "search": "Search the questions",
+    "searchPlaceholder": "For example: payment",
+    "groupsLabel": "Question topics",
+    "groups": {
+      "all": "All",
+      "installment": "Installments",
+      "application": "Application",
+      "payments": "Payments",
+      "delivery": "Delivery"
+    },
+    "empty": {
+      "title": "No questions found",
+      "description": "Try another word or send us your question."
+    },
+    "contact": {
+      "title": "Did not find an answer?",
+      "description": "Send us your question and our specialists will reply."
+    },
+    "items": {
+      "documents": {
+        "question": "What documents do I need for an installment plan?",
+        "answer": "An identity document, a phone number and a completed application are enough. Additional documents may be requested in some cases."
+      },
+      "limits": {
+        "question": "What are the minimum and maximum amounts?",
+        "answer": "The limits depend on the product and the outcome of your application. The values in the calculator are examples."
+      },
+      "accuracy": {
+        "question": "Are the calculator results exact?",
+        "answer": "The calculator shows a preliminary estimate. Final terms are set after your application is reviewed."
+      },
+      "early": {
+        "question": "Can I repay early?",
+        "answer": "Early repayment terms are stated in the contract. Contact us for exact information."
+      },
+      "returns": {
+        "question": "What is the return policy?",
+        "answer": "Return terms depend on the product type and the seller. Details are given on the product page."
+      },
+      "howToApply": {
+        "question": "How do I apply for an installment plan?",
+        "answer": "Choose a product, press “Buy in installments” and fill in the online application. It has a few steps: product, personal details, documents and confirmation."
+      },
+      "decisionTime": {
+        "question": "How long does the review take?",
+        "answer": "The review time depends on how complete the application and documents are. You are notified of the result by SMS and in your account."
+      },
+      "status": {
+        "question": "Where can I see the application status?",
+        "answer": "The “Applications” section of your account shows the status of every application and document."
+      },
+      "cancel": {
+        "question": "Can I cancel an application?",
+        "answer": "An application can be cancelled until the contract is signed. Contact the help section of your account or the contact centre."
+      },
+      "methods": {
+        "question": "How do I make the monthly payment?",
+        "answer": "Payment methods are listed in the contract. Usually you can pay by bank card, through payment apps or at a branch cash desk."
+      },
+      "schedule": {
+        "question": "Where do I find the payment schedule?",
+        "answer": "The payment schedule is issued with the contract and is available in the “Contracts” section of your account."
+      },
+      "late": {
+        "question": "What happens if I pay late?",
+        "answer": "The consequences of a late payment are set by the contract. If you cannot pay on time, contact us in advance and we will look for a solution together."
+      },
+      "shipping": {
+        "question": "How is the product delivered?",
+        "answer": "The delivery method and time depend on the product and the region. The exact details are shown on the product page and at checkout."
+      },
+      "warranty": {
+        "question": "Is the product covered by a warranty?",
+        "answer": "The warranty period is set by the manufacturer and the seller and is shown on the product page."
+      }
+    }
+  },
+  "forms": {
+    "fullName": "First and last name",
+    "phone": "Phone number",
+    "phoneHint": "So we can reach you",
+    "email": "Email (optional)",
+    "message": "Message",
+    "messagePlaceholder": "Write your question or suggestion",
+    "consent": "I agree to the processing of my personal data and have read the privacy policy.",
+    "send": "Send",
+    "sending": "Sending…",
+    "again": "Send another",
+    "sampleNote": "Sample form: the data is not sent or stored anywhere.",
+    "sent": {
+      "title": "Received · sample",
+      "description": "Requests are not sent until the server is connected. The details you entered were not stored anywhere."
+    },
+    "errors": {
+      "fullName": "Enter your first and last name.",
+      "phone": "Enter the phone number as +998 90 123 45 67.",
+      "email": "The email address is not valid.",
+      "message": "The message must be at least 10 characters long.",
+      "consent": "Give your consent to continue.",
+      "company": "Enter the organization name.",
+      "topic": "Choose a topic.",
+      "category": "Choose a business type.",
+      "vacancy": "Choose a vacancy."
+    }
+  },
+  "about": {
+    "title": "About the organization",
+    "subtitle": "BRB Microfinance Organization — installment purchases and financial services",
+    "seo": {
+      "description": "About BRB Microfinance Organization: our goal, principles, service terms and official details."
+    },
+    "lead": {
+      "title": "Get what you need today and spread the payment over a convenient term",
+      "text": "BRB makes buying in installments simple: you choose a product, see the monthly payment in the calculator and apply online. The figures below are shown as a sample."
+    },
+    "stats": {
+      "maxAmount": "Maximum amount (sample)",
+      "branches": "Branches (sample)"
+    },
+    "mission": {
+      "title": "Our goal",
+      "text": "To let every family buy what it needs without extra paperwork and on clear terms. We show the terms openly in advance so that you decide with the full picture in front of you."
+    },
+    "values": {
+      "title": "Our principles",
+      "subtitle": "What we rely on when working with customers",
+      "items": {
+        "transparency": {
+          "title": "Transparency",
+          "description": "The rate, term and total payment are shown before you apply."
+        },
+        "speed": {
+          "title": "Speed",
+          "description": "The application is filled in online and tracked in your account."
+        },
+        "accessibility": {
+          "title": "Convenience",
+          "description": "You choose the payment term that fits your budget."
+        },
+        "security": {
+          "title": "Security",
+          "description": "Personal data is used only to provide the service."
+        }
+      }
+    },
+    "details": {
+      "title": "Official details",
+      "name": "Full name",
+      "license": "License",
+      "licenseValue": "The number and date will be added later",
+      "address": "Address",
+      "email": "Email"
+    }
+  },
+  "branches": {
+    "title": "Branches",
+    "subtitle": "Find the branch nearest to you: address, opening hours and services",
+    "seo": {
+      "description": "BRB branches: addresses, opening hours, phone numbers and available services."
+    },
+    "region": "Region",
+    "allRegions": "All regions",
+    "count": "Branches: {count}",
+    "address": "Address",
+    "hours": "Opening hours",
+    "hoursValue": "Monday–Saturday · 09:00–18:00",
+    "servicesLabel": "Services",
+    "services": {
+      "applications": "Applications",
+      "payments": "Payments",
+      "consulting": "Advice"
+    },
+    "regions": {
+      "tashkent": "Tashkent",
+      "samarkand": "Samarkand",
+      "bukhara": "Bukhara",
+      "fergana": "Fergana",
+      "andijan": "Andijan",
+      "namangan": "Namangan"
+    },
+    "items": {
+      "tashkentCenter": {
+        "name": "Head office",
+        "address": "00 Amir Temur Avenue, Tashkent"
+      },
+      "tashkentChilanzar": {
+        "name": "Chilanzar branch",
+        "address": "00 Bunyodkor Avenue, Chilanzar district, Tashkent"
+      },
+      "samarkand": {
+        "name": "Samarkand branch",
+        "address": "00 Registan Street, Samarkand"
+      },
+      "bukhara": {
+        "name": "Bukhara branch",
+        "address": "00 Mustaqillik Street, Bukhara"
+      },
+      "fergana": {
+        "name": "Fergana branch",
+        "address": "00 Mustaqillik Street, Fergana"
+      },
+      "andijan": {
+        "name": "Andijan branch",
+        "address": "00 Navoi Avenue, Andijan"
+      },
+      "namangan": {
+        "name": "Namangan branch",
+        "address": "00 Navoi Street, Namangan"
+      }
+    },
+    "online": {
+      "title": "You do not have to visit a branch",
+      "description": "Choose a product and apply online — you can track the status in your account."
+    }
+  },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join the BRB team and help make financial services more convenient",
+    "seo": {
+      "description": "Open vacancies at BRB Microfinance Organization and a form to send your CV."
+    },
+    "benefits": {
+      "title": "Why BRB?",
+      "items": {
+        "growth": {
+          "title": "Professional growth",
+          "description": "In-house training and support from experienced colleagues."
+        },
+        "stability": {
+          "title": "Stable income",
+          "description": "Official employment and a salary paid on time."
+        },
+        "team": {
+          "title": "Friendly team",
+          "description": "A place where you are heard and initiative is supported."
+        },
+        "flexibility": {
+          "title": "Convenient schedule",
+          "description": "Some roles offer a hybrid way of working."
+        }
+      }
+    },
+    "vacancies": {
+      "title": "Open vacancies",
+      "count": "Vacancies: {count} · sample",
+      "duties": "Responsibilities",
+      "requirements": "Requirements",
+      "apply": "Apply for this vacancy"
+    },
+    "departments": {
+      "credit": "Credit department",
+      "support": "Customer service",
+      "it": "IT",
+      "branches": "Branches"
+    },
+    "employment": {
+      "fullTime": "Full time",
+      "hybrid": "Hybrid"
+    },
+    "items": {
+      "creditSpecialist": {
+        "title": "Credit specialist",
+        "duties": "Reviewing applications, advising customers on installment terms and preparing documents.",
+        "requirements": "A completed or ongoing degree, Uzbek and Russian; experience working with customers is an advantage."
+      },
+      "supportOperator": {
+        "title": "Contact centre operator",
+        "duties": "Answering customer questions by phone and chat, registering and following up on requests.",
+        "requirements": "Clear and literate speech, confident computer skills, patience and attention."
+      },
+      "frontendDeveloper": {
+        "title": "Frontend developer",
+        "duties": "Building the marketplace and customer account interfaces and maintaining the design system.",
+        "requirements": "Over 2 years of experience with Vue 3 and TypeScript, working knowledge of Nuxt and Tailwind CSS."
+      },
+      "branchManager": {
+        "title": "Branch manager",
+        "duties": "Organizing the work of the branch, overseeing service quality and leading the team.",
+        "requirements": "Over 3 years of experience in finance, management skills, knowledge of the regional market."
+      }
+    },
+    "form": {
+      "title": "Send your CV",
+      "subtitle": "Choose a vacancy and leave your details — we will get in touch.",
+      "vacancy": "Vacancy",
+      "vacancyPlaceholder": "Choose a vacancy",
+      "cv": "CV (optional)",
+      "about": "About you (optional)",
+      "aboutPlaceholder": "A few words about your experience and why you want to work at BRB"
+    }
+  },
+  "contacts": {
+    "title": "Contact us",
+    "subtitle": "If you have a question, a suggestion or a complaint, reach us the way that suits you",
+    "seo": {
+      "description": "BRB contacts: phone, email, head office address and a contact form."
+    },
+    "channels": {
+      "phone": {
+        "title": "Phone",
+        "note": "Calls are answered during opening hours"
+      },
+      "email": {
+        "title": "Email",
+        "note": "We reply within one working day"
+      },
+      "office": {
+        "title": "Head office",
+        "value": "00 Amir Temur Avenue, Tashkent",
+        "note": "All branches are on the “Branches” page"
+      },
+      "hours": {
+        "title": "Opening hours",
+        "note": "Closed on Sunday"
+      }
+    },
+    "form": {
+      "title": "Send a message",
+      "subtitle": "Fill in the form and our specialist will contact you.",
+      "topic": "Topic",
+      "topicPlaceholder": "Choose a topic",
+      "topics": {
+        "installment": "Installments and applications",
+        "payment": "Payment",
+        "order": "Order and delivery",
+        "partnership": "Partnership",
+        "other": "Other"
+      }
+    },
+    "links": {
+      "title": "Quick help",
+      "faq": {
+        "title": "FAQ",
+        "description": "Answers to frequent questions"
+      },
+      "branches": {
+        "title": "Branches",
+        "description": "Addresses and opening hours"
+      },
+      "cabinet": {
+        "title": "Help in your account",
+        "description": "Requests about an application or contract"
+      }
+    }
+  },
+  "partners": {
+    "title": "Work with BRB",
+    "subtitle": "Offer your products in installments on the BRB marketplace and reach new customers. Partnership terms are agreed with each seller individually.",
+    "seo": {
+      "description": "For businesses: selling products in installments on the BRB marketplace, partnership steps and an application form."
+    },
+    "benefits": {
+      "title": "What partners get",
+      "items": {
+        "sales": {
+          "title": "Sales growth",
+          "description": "Installments make it easier for a customer to choose a more expensive product."
+        },
+        "audience": {
+          "title": "New customers",
+          "description": "Your products are shown to BRB customers in the catalog."
+        },
+        "online": {
+          "title": "Online storefront",
+          "description": "You sell online without building your own website."
+        },
+        "support": {
+          "title": "Partner support",
+          "description": "We help with product listings and orders."
+        }
+      }
+    },
+    "steps": {
+      "title": "How the partnership starts",
+      "items": {
+        "request": {
+          "title": "Leave a request",
+          "description": "Tell us briefly about your organization and products."
+        },
+        "review": {
+          "title": "We review it",
+          "description": "A specialist contacts you to clarify the details."
+        },
+        "contract": {
+          "title": "We sign a contract",
+          "description": "Once the terms are agreed, the contract is signed."
+        },
+        "start": {
+          "title": "You start selling",
+          "description": "The products are listed in the catalog and open to customers."
+        }
+      }
+    },
+    "requirements": {
+      "title": "Partner requirements",
+      "items": {
+        "registered": "Registration as a legal entity or an individual entrepreneur",
+        "goods": "Selling quality, lawful products",
+        "documents": "Having the documents and certificates the products require",
+        "service": "Meeting warranty and return obligations"
+      },
+      "note": "The list is a sample. The exact requirements are set by the contract."
+    },
+    "form": {
+      "title": "Partnership application",
+      "subtitle": "Leave your details and the partner team will contact you.",
+      "company": "Organization name",
+      "category": "Business type",
+      "categoryPlaceholder": "Choose a business type",
+      "categories": {
+        "electronics": "Electronics",
+        "appliances": "Home appliances",
+        "furniture": "Furniture and home goods",
+        "fashion": "Clothing and accessories",
+        "other": "Other"
+      },
+      "contactPerson": "Contact person",
+      "message": "Additional information (optional)",
+      "messagePlaceholder": "Product types, number of stores and other details"
+    }
+  },
+  "news": {
+    "title": "News",
+    "seo": {
+      "description": "BRB news and tips on financial literacy, installments and new products."
+    },
+    "total": "Articles: {count}",
+    "views": "Views: {count}",
+    "likes": "Likes: {count}",
+    "back": "All news",
+    "related": "More news",
+    "sampleNote": "The articles are a sample: the text and pictures come from a temporary test source.",
+    "empty": {
+      "title": "No news yet",
+      "description": "New articles will appear here soon."
+    }
+  },
+  "legal": {
+    "contents": "Contents",
+    "sample": {
+      "title": "Sample text",
+      "description": "The text of this document has not passed legal review and has no official force. The final wording will be published later."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "intro": "How BRB collects, uses and protects the personal data of its users.",
+      "sections": {
+        "general": {
+          "title": "General provisions",
+          "body": "This policy sets out how personal data is processed when you use the BRB website and services. By using the website you agree to these terms."
+        },
+        "data": {
+          "title": "What data is collected",
+          "body": "When you register and apply, we collect your name, phone number, email, identity document details, and information about your orders and payments."
+        },
+        "purposes": {
+          "title": "Why the data is used",
+          "body": "The data is used to review your application, conclude and perform the contract, deliver your order, contact you and improve the quality of the service."
+        },
+        "storage": {
+          "title": "Storage and protection",
+          "body": "The data is stored on protected servers and only authorized staff can access it. The storage period is defined by the law and by the contract."
+        },
+        "sharing": {
+          "title": "Sharing with third parties",
+          "body": "The data is shared only when it is needed to provide the service — for example, with a delivery service or a payment organization — and in the cases provided for by law."
+        },
+        "rights": {
+          "title": "Your rights",
+          "body": "You may review your data, ask for it to be corrected or deleted, and withdraw your consent to its processing."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "body": "The website uses cookies and browser storage to remember the selected language, the cart and your favorites. You can turn them off in the browser settings."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of use",
+      "intro": "The rules for using the BRB website and services.",
+      "sections": {
+        "general": {
+          "title": "General provisions",
+          "body": "These terms govern the relationship between BRB and the user of the website. By starting to use the website you accept the terms."
+        },
+        "account": {
+          "title": "Registration and account",
+          "body": "When you create an account you must provide accurate and current details. You are responsible for keeping your sign-in details confidential."
+        },
+        "orders": {
+          "title": "Orders",
+          "body": "Product descriptions, prices and availability on the website are given for information and may change. An order is placed only once it is confirmed."
+        },
+        "installment": {
+          "title": "Installment terms",
+          "body": "The figures in the calculator and on the product page are preliminary. The final rate, term and payment schedule are set in the contract after the application is reviewed."
+        },
+        "payments": {
+          "title": "Payments",
+          "body": "Payments are made according to the schedule in the contract. If a payment is late, the measures provided for by the contract apply."
+        },
+        "delivery": {
+          "title": "Delivery and returns",
+          "body": "The delivery time and method are shown at checkout. Returns are handled in line with the applicable law and the seller’s terms."
+        },
+        "liability": {
+          "title": "Liability and changes",
+          "body": "BRB is not liable for the service being temporarily unavailable because of technical failures. These terms may be updated; a new version takes effect when it is published on the website."
+        }
+      }
     }
   }
 }

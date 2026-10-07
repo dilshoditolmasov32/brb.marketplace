@@ -37,7 +37,7 @@ const isLoading = computed(() => status.value === 'pending' || status.value === 
 
     <ul
       v-else-if="isLoading && !visible.length"
-      class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      class="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
       aria-busy="true"
     >
       <li v-for="n in 4" :key="n"><UiSkeleton variant="card" /></li>
@@ -48,7 +48,7 @@ const isLoading = computed(() => status.value === 'pending' || status.value === 
         {{ $t('favorites.count', { count: visible.length }) }} ·
         {{ $t('cabinet.favorites.samplePrices') }}
       </p>
-      <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <ul class="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         <li v-for="item in visible" :key="item.id" class="flex flex-col gap-2">
           <ProductCard :product="item" class="flex-1" />
           <UiButton size="sm" variant="ghost" block @click="favorites.toggle(item.id)">

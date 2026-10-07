@@ -54,7 +54,7 @@ watch(form, () => (isSaved.value = false))
   <CabinetShell section="profile">
     <CabinetCard :title="$t('cabinet.profile.personal')">
       <form class="flex flex-col gap-4" novalidate @submit.prevent="save">
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <UiInput
             v-model="form.fullName"
             :label="$t('auth.fullName')"
@@ -90,12 +90,14 @@ watch(form, () => (isSaved.value = false))
         <UiAlert v-if="isSaved" tone="success" :title="$t('cabinet.profile.saved.title')">
           {{ $t('cabinet.profile.saved.description') }}
         </UiAlert>
-        <UiButton type="submit" block>{{ $t('cabinet.profile.save') }}</UiButton>
+        <UiButton type="submit" block class="md:w-auto md:min-w-40 md:self-start">
+          {{ $t('cabinet.profile.save') }}
+        </UiButton>
       </form>
     </CabinetCard>
 
     <CabinetCard :title="$t('cabinet.profile.documents')">
-      <div class="flex justify-between gap-4 text-compact">
+      <div class="flex flex-wrap justify-between gap-x-4 gap-y-1 text-compact">
         <span class="text-text-secondary">{{ $t('cabinet.profile.idCard') }}</span>
         <span class="font-semibold text-text tabular-nums">
           {{ CABINET_SAMPLE.documentNumber }}

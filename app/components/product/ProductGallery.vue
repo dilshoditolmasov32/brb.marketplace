@@ -78,7 +78,7 @@ watch(
     >
       <ul
         ref="track"
-        class="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        class="flex snap-x snap-mandatory overflow-x-auto [scrollbar:none] [&::-webkit-scrollbar]:hidden"
         tabindex="0"
         @scroll.passive="syncActiveIndex"
         @keydown.left.prevent="goTo(activeIndex - 1)"
@@ -101,7 +101,7 @@ watch(
             :loading="index === 0 ? 'eager' : 'lazy'"
             :fetchpriority="index === 0 ? 'high' : undefined"
             draggable="false"
-            class="h-72 w-full object-contain transition-transform duration-200 select-none sm:h-96 lg:h-[27rem]"
+            class="h-72 w-full object-contain transition-transform duration-200 select-none sm:h-96 lg:h-108"
             :style="
               zoomOrigin && index === activeIndex
                 ? { transform: `scale(${ZOOM_SCALE})`, transformOrigin: zoomOrigin }
