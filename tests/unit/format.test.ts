@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { formatCurrency, formatDate, formatNumber, formatPercent } from '~/utils/format'
+import {
+  formatCurrency,
+  formatDate,
+  formatDateNumeric,
+  formatNumber,
+  formatPercent,
+} from '~/utils/format'
 
 // Digit groups are separated by non-breaking spaces; compare with plain spaces
 const plain = (value: string) => value.replace(/\s/g, ' ')
@@ -57,5 +63,12 @@ describe('formatDate', () => {
 
   it('does not shift the day with the viewer time zone', () => {
     expect(formatDate('2026-01-01T00:30:00Z', 'uz')).toBe('1 yanvar 2026')
+  })
+})
+
+describe('formatDateNumeric', () => {
+  it('formats a compact date in UTC', () => {
+    expect(formatDateNumeric('2026-11-10')).toBe('10.11.2026')
+    expect(formatDateNumeric('2027-01-05T00:30:00Z')).toBe('05.01.2027')
   })
 })

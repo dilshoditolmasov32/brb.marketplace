@@ -79,3 +79,11 @@ export function formatDate(value: Date | string | number, locale: AppLocale): st
     timeZone: 'UTC',
   }).format(date)
 }
+
+/** Compact numeric date for tables, the same in every locale: 10.11.2026 (UTC). */
+export function formatDateNumeric(value: Date | string | number): string {
+  const date = new Date(value)
+  const day = String(date.getUTCDate()).padStart(2, '0')
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0')
+  return `${day}.${month}.${date.getUTCFullYear()}`
+}

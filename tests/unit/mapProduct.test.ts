@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { convertUsdToUzs, mapProduct } from '~/features/catalog/utils/mapProduct'
+import { convertUsdToUzs, mapProduct } from '~/utils/mapProduct'
 
 describe('convertUsdToUzs', () => {
   it('converts at the sample rate and rounds to the price step', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { DEFAULT_CATEGORY_ICON, categoryIcon } from '~/features/catalog/utils/categoryIcon'
+import { DEFAULT_CATEGORY_ICON, categoryIcon } from '~/utils/categoryIcon'
 
 describe('categoryIcon', () => {
   it('returns a specific icon for known categories', () => {

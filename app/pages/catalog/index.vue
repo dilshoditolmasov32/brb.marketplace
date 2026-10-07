@@ -1,14 +1,7 @@
 <script setup lang="ts">
-const { t } = useI18n()
-
-useSeoMeta({
-  title: () => t('catalog.title'),
-  description: () => t('catalog.seo.description'),
-  ogTitle: () => t('catalog.title'),
-  ogDescription: () => t('catalog.seo.description'),
-})
+import CatalogView from '~/components/views/catalog/CatalogView.vue'
 </script>
 
 <template>
-  <CatalogListing :title="$t('catalog.title')" :breadcrumbs="[{ label: $t('catalog.title') }]" />
+  <CatalogView />
 </template>

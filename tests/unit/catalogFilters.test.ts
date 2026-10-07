@@ -4,7 +4,7 @@ import {
   countActiveCatalogFilters,
   emptyCatalogFilters,
   parseCatalogFilters,
-} from '~/features/catalog/utils/catalogFilters'
+} from '~/utils/catalogFilters'
 
 describe('catalog filters', () => {
   it('returns empty filters for an empty URL', () => {

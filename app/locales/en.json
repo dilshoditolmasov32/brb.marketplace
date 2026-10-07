@@ -1,0 +1,655 @@
+{
+  "common": {
+    "siteName": "BRB Microfinance Organization",
+    "brand": "BRB",
+    "tagline": "Microfinance organization",
+    "apply": "Apply",
+    "close": "Close",
+    "viewAll": "View all",
+    "retry": "Try again",
+    "backToTop": "Back to top"
+  },
+  "header": {
+    "utilityNav": "Utility links",
+    "mainNav": "Main navigation",
+    "categoriesNav": "Categories",
+    "city": "Tashkent",
+    "branches": "Branches",
+    "becomePartner": "Become a partner",
+    "faq": "FAQ",
+    "myApplications": "My applications",
+    "language": "Language",
+    "languageSwitching": "Switching language…",
+    "catalog": "Catalog",
+    "searchPlaceholder": "Search products and categories",
+    "search": "Search",
+    "login": "Sign in",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "menu": "Menu",
+    "deals": "Deals",
+    "installment": "Buy in installments",
+    "calculator": "Calculator"
+  },
+  "footer": {
+    "about": {
+      "title": "About us",
+      "company": "About the organization",
+      "branches": "Branches",
+      "careers": "Careers"
+    },
+    "users": {
+      "title": "For customers",
+      "contact": "Contact us",
+      "faq": "FAQ",
+      "calculator": "Installment calculator"
+    },
+    "partners": {
+      "title": "For businesses",
+      "become": "Work with BRB",
+      "apply": "Partnership application"
+    },
+    "social": "BRB on social media",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "copyright": "© {year} BRB Microfinance Organization. All rights reserved."
+  },
+  "errors": {
+    "loadFailed": "Could not load the data",
+    "tryAgain": "Check your connection and try again."
+  },
+  "finance": {
+    "monthlyPayment": "Monthly payment",
+    "annualRate": "Annual interest rate",
+    "term": "Payment term",
+    "totalInterest": "Total interest",
+    "totalPayment": "Total payment",
+    "months": "{count} mo",
+    "monthUnit": "mo"
+  },
+  "product": {
+    "installmentBadge": "Installments",
+    "monthlyPayment": "Monthly payment",
+    "term": "Term",
+    "addToCart": "Add to cart",
+    "inCart": "Go to Cart",
+    "rating": "Rating: {value} out of 5"
+  },
+  "calculator": {
+    "title": "Installment calculator",
+    "subtitle": "Estimate your monthly payment. Example only.",
+    "amount": "Product price",
+    "amountStep": "In steps of {step}",
+    "termStep": "In steps of 1 month",
+    "rateNote": "{rate} nominal annual rate. Fees and insurance are not included in the example.",
+    "disclaimer": "Example calculation. Not a credit offer.",
+    "seo": {
+      "description": "Installment calculator: enter the product price and term to see the monthly and total payment. The calculation is an example."
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Buy in installments — convenient monthly payments",
+      "description": "BRB Microfinance Organization: buy products in installments, estimate the monthly payment and apply online."
+    },
+    "sample": "example",
+    "hero": {
+      "badge": "New arrival",
+      "price": "Price",
+      "perMonth": "{amount} per month",
+      "buy": "Buy in installments",
+      "catalog": "Go to catalog",
+      "carousel": "Featured products",
+      "slide": "{current} of {total}",
+      "goTo": "Go to slide {number}",
+      "previous": "Previous slide",
+      "next": "Next slide"
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "promo": {
+      "title": "Installment terms",
+      "description": "All prices and monthly payments on this page are examples. Actual terms are set when an application is approved."
+    },
+    "tabs": {
+      "title": "Products",
+      "popular": "Popular",
+      "new": "New",
+      "recommended": "Recommended"
+    },
+    "financing": {
+      "title": "Buy in installments",
+      "description": "From {min} to {max} · Fast decision (example)",
+      "rate": "Annual rate (example)",
+      "maxTerm": "Maximum term",
+      "online": "Online",
+      "onlineLabel": "Application"
+    },
+    "deals": {
+      "title": "Deals",
+      "subtitle": "Limited-time offers · Updated daily"
+    },
+    "calculator": {
+      "subtitle": "Estimate the monthly payment from the product price. Example only."
+    },
+    "steps": {
+      "title": "How do installments work?",
+      "subtitle": "From choosing a product to paying — simple steps",
+      "cta": "Start shopping",
+      "items": {
+        "choose": {
+          "title": "Choose a product",
+          "description": "Pick the product you want and see its installment option."
+        },
+        "calculate": {
+          "title": "Calculate",
+          "description": "See your monthly payment in the calculator and pick a convenient term."
+        },
+        "apply": {
+          "title": "Apply",
+          "description": "Fill in the online application. It takes a few minutes."
+        },
+        "receive": {
+          "title": "Receive the product",
+          "description": "Once the application is approved, order delivery of the product."
+        }
+      }
+    },
+    "news": {
+      "title": "News and tips",
+      "subtitle": "On financial literacy and new products"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Common questions about installments and shopping",
+      "items": {
+        "documents": {
+          "question": "What documents do I need for an installment plan?",
+          "answer": "An identity document, a phone number and a completed application are enough. Additional documents may be requested in some cases."
+        },
+        "limits": {
+          "question": "What are the minimum and maximum amounts?",
+          "answer": "The limits depend on the product and the outcome of your application. The values in the calculator are examples."
+        },
+        "accuracy": {
+          "question": "Are the calculator results exact?",
+          "answer": "The calculator shows a preliminary estimate. Final terms are set after your application is reviewed."
+        },
+        "early": {
+          "question": "Can I repay early?",
+          "answer": "Early repayment terms are stated in the contract. Contact us for exact information."
+        },
+        "returns": {
+          "question": "What is the return policy?",
+          "answer": "Return terms depend on the product type and the seller. Details are given on the product page."
+        }
+      }
+    },
+    "cta": {
+      "title": "Buy now, pay later",
+      "description": "Convenient installment terms. All figures are shown as examples."
+    }
+  },
+  "breadcrumbs": {
+    "label": "Breadcrumb",
+    "home": "Home"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {page}"
+  },
+  "catalog": {
+    "title": "Catalog",
+    "all": "All products",
+    "categories": "Categories",
+    "total": "Total",
+    "products": "{count} products",
+    "calculate": "Calculate",
+    "sort": {
+      "label": "Sort by",
+      "popular": "Popularity",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "discount": "Biggest discount",
+      "title": "Name"
+    },
+    "empty": {
+      "title": "No products found",
+      "description": "Try another category or search term."
+    },
+    "seo": {
+      "description": "BRB catalog: buy products in installments. The monthly payment is shown for every product.",
+      "categoryDescription": "{category}: products available in installments and their monthly payments."
+    },
+    "filters": {
+      "title": "Filters",
+      "reset": "Reset",
+      "apply": "Apply filters",
+      "price": "Price, UZS",
+      "priceHint": "Set the product price range.",
+      "min": "Minimum",
+      "max": "Maximum",
+      "financing": "Financing",
+      "installmentOnly": "Installments available",
+      "zeroInterestOnly": "0% interest",
+      "term": "Payment term",
+      "anyTerm": "Any",
+      "monthlyPayment": "Monthly payment",
+      "brand": "Brand",
+      "brandSearch": "Search...",
+      "memory": "Storage"
+    },
+    "chips": {
+      "priceFrom": "From {value}",
+      "priceTo": "Up to {value}",
+      "term": "{value} installments",
+      "monthlyTo": "Up to {value} per month",
+      "remove": "Remove the “{label}” filter",
+      "clearAll": "Clear all"
+    }
+  },
+  "search": {
+    "title": "Search",
+    "resultsFor": "Results for “{query}”",
+    "empty": {
+      "title": "What are you looking for?",
+      "description": "Type a product or category name in the search field above."
+    }
+  },
+  "productPage": {
+    "showImage": "Show image {number}",
+    "gallery": "Product images",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "fullscreen": "View full screen",
+    "reviewCount": "{count} reviews",
+    "outOfStock": "Out of stock",
+    "addToFavorites": "Add to favorites",
+    "inFavorites": "In favorites",
+    "about": "About the product",
+    "reviews": "Reviews",
+    "similar": "Similar products",
+    "loanAmount": "Financed amount",
+    "delivery": {
+      "title": "Delivery and availability",
+      "availability": "Availability",
+      "shipping": "Delivery",
+      "returns": "Returns"
+    },
+    "specs": {
+      "title": "Key specifications",
+      "brand": "Brand",
+      "category": "Category",
+      "sku": "SKU",
+      "warranty": "Warranty",
+      "dimensions": "Dimensions",
+      "weight": "Weight"
+    },
+    "installment": {
+      "title": "Buy in installments",
+      "subtitle": "Example calculation only. Not a final offer.",
+      "termHint": "Actual terms are set when the application is approved",
+      "buy": "Buy in installments",
+      "calculate": "Detailed calculation",
+      "termsTitle": "Installment terms",
+      "downPayment": "Down payment",
+      "downPaymentHint": "From 0 to {max}. The total payment includes the down payment."
+    },
+    "seo": {
+      "description": "{title} — {price}. In installments: from {monthly} per month. Example calculation."
+    },
+    "color": "Color",
+    "memory": "Storage"
+  },
+  "errorPage": {
+    "home": "Back to home",
+    "notFound": {
+      "title": "Page not found",
+      "description": "The link may be outdated or the address may be mistyped."
+    },
+    "forbidden": {
+      "title": "Access restricted",
+      "description": "Sign in or get permission to view this page."
+    },
+    "tooManyRequests": {
+      "title": "Too many requests",
+      "description": "Wait a moment and try again."
+    },
+    "unavailable": {
+      "title": "Service temporarily unavailable",
+      "description": "Please try again a little later."
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "description": "Refresh the page or try again later."
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "itemsTotal": "Items total",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity",
+    "remove": "Remove “{title}” from the cart",
+    "clear": "Clear cart",
+    "empty": {
+      "title": "Your cart is empty",
+      "description": "Pick a product in the catalog and it will appear here."
+    }
+  },
+  "favorites": {
+    "title": "Favorite products",
+    "count": "{count} favorite products",
+    "remove": "Remove from favorites",
+    "empty": {
+      "title": "No favorites yet",
+      "description": "Press “Add to favorites” on the page of a product you like."
+    }
+  },
+  "application": {
+    "seoTitle": "Installment application",
+    "sampleNote": "Sample application. No real credit request is sent.",
+    "titles": {
+      "product": "Product and installment",
+      "details": "Personal information",
+      "documents": "Documents",
+      "review": "Review",
+      "confirmation": "Confirmation"
+    },
+    "steps": {
+      "product": "Product",
+      "details": "Details",
+      "documents": "Documents",
+      "review": "Review",
+      "confirmation": "Confirmation"
+    },
+    "stepState": {
+      "done": "Done",
+      "current": "Current step",
+      "upcoming": "Next step"
+    },
+    "purchase": {
+      "title": "Selected purchase",
+      "total": "Full product price",
+      "note": "Changing the product restarts the calculation and the application.",
+      "backToProduct": "Back to product",
+      "backToCart": "Back to cart",
+      "sample": "Sample product",
+      "quantity": "{count} pcs"
+    },
+    "summary": {
+      "title": "Financial summary",
+      "loanAmount": "Loan amount",
+      "term": "Loan term",
+      "sample": "sample",
+      "formula": "{term} × {monthly} = {total}. Fees and insurance are not included in the sample. The rate, limit and term do not change during the calculation."
+    },
+    "continue": "Enter your details",
+    "back": "Back",
+    "personal": {
+      "title": "Personal information",
+      "subtitle": "Required fields are marked with *.",
+      "fullName": "First and last name",
+      "fullNameHint": "Exactly as written in your document",
+      "document": "Document number",
+      "documentHint": "Sample format: AA 0000000",
+      "phone": "Phone number",
+      "phoneHint": "For SMS confirmation",
+      "email": "Email (optional)",
+      "emailHint": "For the confirmation email",
+      "upload": "Document copy",
+      "consent": "I agree to the processing of my personal data and have read the privacy policy.",
+      "submit": "Save and continue",
+      "sending": "Sending…"
+    },
+    "errors": {
+      "fullName": "Enter your first and last name.",
+      "documentNumber": "Enter the document number as AA 0000000.",
+      "phone": "Enter the phone number as +998 90 123 45 67.",
+      "email": "The email address is not valid.",
+      "consent": "Give your consent to continue."
+    },
+    "pending": {
+      "title": "The documents step is not ready yet",
+      "description": "The details you entered were not sent or saved anywhere."
+    },
+    "empty": {
+      "title": "No product selected for the application",
+      "description": "Choose a product in the catalog or add one to the cart."
+    }
+  },
+  "auth": {
+    "phone": "Phone number",
+    "phoneHint": "A confirmation code will be sent to this number",
+    "fullName": "First and last name",
+    "password": "Password",
+    "passwordHint": "At least {min} characters",
+    "passwordConfirm": "Repeat the password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Sign in to your account with your phone number and password.",
+      "submit": "Sign in",
+      "noAccount": "No account yet?"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Create an account and arrange installment purchases in a few minutes.",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "consent": "I accept the terms of use and the privacy policy."
+    },
+    "errors": {
+      "fullName": "Enter your first and last name.",
+      "phone": "Enter the phone number as +998 90 123 45 67.",
+      "password": "The password must be at least {min} characters long.",
+      "passwordConfirm": "The passwords do not match.",
+      "consent": "Give your consent to continue."
+    }
+  },
+  "cabinet": {
+    "title": "Account",
+    "greeting": "Hello, {name}!",
+    "sampleName": "Aziza Karimova",
+    "sampleCustomer": "Sample customer",
+    "sampleNote": "Sample state. The customer, application and contract details are not real.",
+    "signOut": "Sign out",
+    "signOutConfirm": {
+      "title": "Sign out of your account?",
+      "description": "You will need to sign in again to open your account.",
+      "confirm": "Yes, sign out",
+      "cancel": "Cancel"
+    },
+    "nav": {
+      "label": "Account sections",
+      "overview": "Overview",
+      "applications": "Applications",
+      "contracts": "Contracts",
+      "profile": "Profile and documents",
+      "notifications": "Notifications",
+      "favorites": "Favorites",
+      "support": "Help"
+    },
+    "titles": {
+      "overview": "Overview",
+      "applications": "Applications and statuses",
+      "contracts": "Contract and payments",
+      "profile": "Profile and documents",
+      "notifications": "Notifications",
+      "favorites": "Favorite products",
+      "support": "Help center"
+    },
+    "stats": {
+      "contracts": "Active contracts",
+      "payments": "Unpaid payments",
+      "messages": "New messages"
+    },
+    "overview": {
+      "latest": "Latest notifications",
+      "support": "Contact support",
+      "recommended": "Recommended for you"
+    },
+    "payment": {
+      "title": "Next payment",
+      "status": "Active · sample",
+      "first": "first payment",
+      "contract": "Contract",
+      "remaining": "Total remaining",
+      "schedule": "View payment schedule"
+    },
+    "application": {
+      "title": "Application status",
+      "status": "Approved · sample",
+      "note": "the contract is signed in the sample. This is not a real credit decision.",
+      "view": "View application"
+    },
+    "applications": {
+      "tabs": {
+        "all": "All ({count})",
+        "active": "Active",
+        "drafts": "Drafts"
+      },
+      "main": "main purchase",
+      "monthlyAndTerm": "Sample monthly payment / term",
+      "timeline": {
+        "received": "Application received",
+        "documents": "Documents checked",
+        "decision": "Sample decision approved",
+        "signed": "{contract} signed in the sample"
+      },
+      "note": "A real decision and documents are issued only in the official process.",
+      "openContract": "Open contract",
+      "others": "Other sample statuses",
+      "statuses": {
+        "draft": {
+          "label": "Draft",
+          "note": "The details are not filled in.",
+          "action": "Continue"
+        },
+        "documents": {
+          "label": "Document needed",
+          "note": "The ID card photo is unclear.",
+          "action": "Replace document"
+        },
+        "cancelled": {
+          "label": "Cancelled",
+          "note": "Archived sample status. No payment was charged."
+        }
+      }
+    },
+    "contracts": {
+      "status": "Active contract · sample",
+      "financed": "Financed amount",
+      "terms": "{rate} nominal annual rate · {term} · total interest {interest}. No fees or insurance in the sample. Not a real contract.",
+      "pdf": "Contract PDF · sample",
+      "schedule": {
+        "title": "Payment schedule",
+        "summary": "{count} × {monthly} = {total} · all payments are pending",
+        "date": "Date",
+        "payment": "Payment",
+        "state": "Status",
+        "pending": "Pending",
+        "total": "Schedule total",
+        "note": "Sample schedule. Real dates, rounding and terms are set in the contract."
+      }
+    },
+    "profile": {
+      "personal": "Personal information",
+      "fullNameHint": "Exactly as written in your document",
+      "email": "Email",
+      "region": "Region",
+      "regionPlaceholder": "Tashkent",
+      "save": "Save changes",
+      "saved": {
+        "title": "Saved · sample",
+        "description": "The name was updated in your account. Other details are not saved until the server is connected."
+      },
+      "errors": {
+        "fullName": "Enter your first and last name.",
+        "phone": "Enter the phone number as +998 90 123 45 67.",
+        "email": "The email address is not valid."
+      },
+      "documents": "My documents",
+      "idCard": "ID card · sample",
+      "fileNotes": {
+        "uploaded": "Uploaded",
+        "contract": "Sample contract",
+        "schedule": "Payment schedule"
+      },
+      "replace": "Replace document"
+    },
+    "notifications": {
+      "unreadCount": "{count} unread",
+      "allRead": "Everything is read",
+      "unread": "Unread",
+      "read": "Read",
+      "settings": "Message settings",
+      "sms": "SMS notifications",
+      "markAllRead": "Mark all as read",
+      "items": {
+        "contractReady": {
+          "title": "Your contract copy is ready",
+          "description": "Sample contract {contract} and the {count}-month payment schedule were added to your account."
+        },
+        "statusUpdated": {
+          "title": "Application status updated",
+          "description": "{application} is approved in the sample. A real decision comes from the service process."
+        },
+        "documentsAccepted": {
+          "title": "Documents accepted",
+          "description": "Both sides of the ID card were accepted for review in the sample."
+        }
+      }
+    },
+    "favorites": {
+      "samplePrices": "sample prices",
+      "continue": {
+        "title": "Continue your purchase",
+        "description": "{product} is linked to your application and product choice.",
+        "action": "Back to my application"
+      }
+    },
+    "support": {
+      "ticket": {
+        "title": "Question about the payment schedule",
+        "status": "Open",
+        "description": "Sample request: clarify the date of the first payment.",
+        "state": "Request open · sample"
+      },
+      "chat": {
+        "title": "Conversation",
+        "support": "Support team · sample reply",
+        "label": "Your message",
+        "placeholder": "Write your question",
+        "send": "Send message",
+        "note": "Sample conversation: messages are not sent anywhere."
+      },
+      "sample": {
+        "question": "When is the first payment? Where can I see the schedule?",
+        "answer": "In the sample schedule the first payment is on November 10, 2026. You can see the payment schedule in the Contracts section. Check the real date in your signed contract."
+      },
+      "faq": {
+        "question": "Where can I see my application status?",
+        "answer": "The Applications section of your account shows the application and document statuses. Until a decision is made, the status stays Pending."
+      }
+    },
+    "guest": {
+      "title": "Sign in to open your account",
+      "description": "Your applications, contracts and payments appear here."
+    }
+  },
+  "upload": {
+    "prompt": "Choose a file or drop it here",
+    "choose": "Choose file",
+    "remove": "Remove file",
+    "uploading": "Uploading the file",
+    "hint": "{formats} · up to {size} MB · one file",
+    "errors": {
+      "tooLarge": "The file is too large. Choose a file up to {size} MB.",
+      "wrongType": "This file type is not accepted. Choose a {formats} file."
+    }
+  }
+}

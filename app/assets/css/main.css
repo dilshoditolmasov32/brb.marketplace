@@ -93,6 +93,35 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Scrollbars follow the tokens: a slim neutral thumb that turns brand red on hover */
+  /* Firefox only: in Chromium these two properties would switch off the rules below */
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-strong) transparent;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--border-strong);
+    border: 2px solid transparent;
+    border-radius: var(--radius-full);
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+  }
+
   /* Keyboard focus: 2px ring + 2px offset on every interactive element */
   :focus-visible {
     outline: 2px solid var(--focus);

@@ -2,17 +2,9 @@
 import { Icon } from '#components'
 
 const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-
-type LocaleCode = (typeof locale)['value']
+const { switchLocale } = useLocaleSwitch()
 
 const ChevronIcon = () => h(Icon, { name: 'brb:chevron-down', size: 14 })
-
-// Switching the language is a navigation to the same page under the other locale prefix
-async function switchLocale(code: LocaleCode) {
-  if (code === locale.value) return
-  await navigateTo(switchLocalePath(code))
-}
 </script>
 
 <template>

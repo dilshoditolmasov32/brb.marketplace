@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck",
-    "api-gen": "node app/api-gen-2/generate.mjs",
+    "api-gen": "node app/api-gen/generate.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

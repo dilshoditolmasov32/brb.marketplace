@@ -9,5 +9,6 @@ export function useFormat() {
       formatNumber(value, current.value, maximumFractionDigits),
     percent: (value: number) => formatPercent(value, current.value),
     date: (value: Date | string | number) => formatDate(value, current.value),
+    dateNumeric: formatDateNumeric,
   }
 }

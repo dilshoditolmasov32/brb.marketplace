@@ -3,6 +3,8 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const cart = useCartStore()
+const authModal = useAuthModal()
+const auth = useAuthStore()
 const { data: categories } = await useCategories()
 
 const HEADER_CATEGORY_LIMIT = 8
@@ -24,6 +26,12 @@ async function submitSearch() {
   await navigateTo({ path: localePath(ROUTES.search), query: { q } })
 }
 
+// The mobile menu makes way for the sign-in dialog
+function openLogin() {
+  isMenuOpen.value = false
+  authModal.open('login')
+}
+
 // Close the menus after any navigation
 watch(
   () => route.fullPath,
@@ -40,7 +48,6 @@ const utilityLinks = [
 ]
 
 const actions = [
-  { to: ROUTES.login, labelKey: 'header.login', icon: 'lucide:user' },
   { to: ROUTES.favorites, labelKey: 'header.favorites', icon: 'lucide:heart' },
   { to: ROUTES.cart, labelKey: 'header.cart', icon: 'lucide:shopping-bag' },
 ]
@@ -118,11 +125,27 @@ const actions = [
         class="ml-auto flex items-center gap-1 md:ml-0 lg:gap-4"
       >
         <NuxtLink
+          v-if="auth.isSignedIn"
+          :to="localePath(ROUTES.cabinet)"
+          class="hidden min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text hover:text-primary md:flex"
+        >
+          <Icon name="lucide:user" size="20" />
+          <span class="sr-only xl:not-sr-only">{{ $t('cabinet.title') }}</span>
+        </NuxtLink>
+        <button
+          v-else
+          type="button"
+          class="hidden min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text hover:text-primary md:flex"
+          @click="authModal.open('login')"
+        >
+          <Icon name="lucide:user" size="20" />
+          <span class="sr-only xl:not-sr-only">{{ $t('header.login') }}</span>
+        </button>
+        <NuxtLink
           v-for="action in actions"
           :key="action.to"
           :to="localePath(action.to)"
           class="flex min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium text-text hover:text-primary"
-          :class="action.to === ROUTES.login && 'hidden md:flex'"
         >
           <span class="relative flex">
             <Icon :name="action.icon" size="20" />
@@ -203,12 +226,22 @@ const actions = [
       <UiDrawer v-model="isMenuOpen" :title="$t('header.menu')">
         <nav :aria-label="$t('header.mainNav')" class="flex flex-col">
           <NuxtLink
-            :to="localePath(ROUTES.login)"
+            v-if="auth.isSignedIn"
+            :to="localePath(ROUTES.cabinet)"
             class="flex min-h-11 items-center gap-3 text-sm font-semibold text-text"
           >
             <Icon name="lucide:user" size="20" />
-            {{ $t('header.login') }}
+            {{ $t('cabinet.title') }}
           </NuxtLink>
+          <button
+            v-else
+            type="button"
+            class="flex min-h-11 items-center gap-3 text-sm font-semibold text-text"
+            @click="openLogin"
+          >
+            <Icon name="lucide:user" size="20" />
+            {{ $t('header.login') }}
+          </button>
           <NuxtLink
             :to="localePath(ROUTES.branches)"
             class="flex min-h-11 items-center text-sm text-text"

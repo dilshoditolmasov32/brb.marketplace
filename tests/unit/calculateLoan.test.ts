@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { calculateLoan } from '~/features/calculator/utils/calculateLoan'
+import { calculateLoan } from '~/utils/calculateLoan'
 
 describe('calculateLoan', () => {
   it('matches the reference figures from the design', () => {

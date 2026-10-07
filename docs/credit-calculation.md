@@ -1,6 +1,6 @@
 # Nasiya hisob-kitobi
 
-Kod: `app/features/calculator/utils/calculateLoan.ts`
+Kod: `app/utils/calculateLoan.ts`
 Testlar: `tests/unit/calculateLoan.test.ts`
 
 ## Formula
@@ -43,4 +43,4 @@ Bu qiymatlar dizayndagi namuna bilan bir xil va testda qayd etilgan.
   Haqiqiy shartlar backenddan kelishi kerak.
 - Natija dastlabki hisob; yakuniy taklif emas. Interfeysda bu har doim yozib qo'yiladi.
 - Mock API narxlari dollarda keladi va `1 $ = 12 500 so'm` namuna kursi bilan
-  so'mga o'giriladi (`app/features/catalog/utils/mapProduct.ts`).
+  so'mga o'giriladi (`app/utils/mapProduct.ts`).

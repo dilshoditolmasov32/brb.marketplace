@@ -18,5 +18,10 @@ useHead({
       <slot />
     </div>
     <AppFooter />
+    <AppLocaleLoader />
+    <ClientOnly>
+      <AppBackToTop />
+      <AuthModal />
+    </ClientOnly>
   </div>
 </template>

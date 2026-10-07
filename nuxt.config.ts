@@ -18,15 +18,11 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
   ],
 
-  // Layout components keep their plain names (<AppHeader />); the rest are path-prefixed (<UiButton />)
-  components: [
-    { path: '~/components/layout', pathPrefix: false },
-    { path: '~/features', pattern: '*/components/**/*.vue', pathPrefix: false },
-    '~/components',
-  ],
+  // A component is named after its file (ui/UiButton.vue -> <UiButton />), never after its folder
+  components: [{ path: '~/components', pathPrefix: false }],
 
   imports: {
-    dirs: ['constants', 'features/*/composables', 'features/*/utils'],
+    dirs: ['constants'],
   },
 
   css: ['~/assets/css/main.css'],
@@ -78,6 +74,9 @@ export default defineNuxtConfig({
   i18n: {
     // Needed for absolute hreflang and canonical links
     baseUrl: process.env.NUXT_SITE_URL || 'http://localhost:3000',
+    // Translations live in app/locales
+    restructureDir: 'app',
+    langDir: 'locales',
     strategy: 'prefix',
     defaultLocale: 'uz',
     locales: [

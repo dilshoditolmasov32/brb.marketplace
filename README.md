@@ -50,33 +50,54 @@ Zod, Nuxt Image, Nuxt Icon (lucide), Nuxt Fonts, @nuxtjs/sitemap, @nuxtjs/robots
 
 ## Arxitektura
 
-Standart Nuxt papkalari, murakkab biznes logikasi bor domenlar esa `app/features/` ichida.
+Standart Nuxt papkalari. `pages/` faqat routing, sahifaning o'zi `components/views/` ichida.
 
 ```text
 app/
+├── api/            generatsiya qilingan API SDK (qo'lda tahrirlanmaydi)
+├── api-gen/        SDK generatori: npm run api-gen
 ├── assets/css/     tokens.css (design tokenlar), main.css (Tailwind theme), element-plus.css
 ├── assets/icons/   Figma'dan eksport qilingan ikonlar: <Icon name="brb:search" />
 ├── components/
 │   ├── ui/         UiButton, UiInput, UiSelect, UiBadge ... (biznesdan mustaqil UI)
-│   ├── finance/    moliyaviy qiymat komponentlari (oylik to'lov, stavka, xulosa)
 │   ├── layout/     AppHeader, AppFooter, navigatsiya
-│   ├── cards/      ProductCard, NewsCard ...
-│   └── sections/   sahifa bo'limlari
-├── features/       catalog/, calculator/, application/, cart/, favorites/, cabinet/
-├── api/            API client va resurs funksiyalari (URL'lar faqat shu yerda)
-├── composables/    umumiy composable'lar
+│   ├── catalog/    CatalogListing, CatalogFilters, CatalogCategoryNav
+│   ├── product/    ProductCard, ProductGallery
+│   ├── calculator/ CreditCalculator
+│   ├── finance/    FinanceSummary
+│   ├── home/       bosh sahifa bo'limlari: HomeHero, HomeDeals ...
+│   └── views/      sahifa darajasidagi komponentlar, pages/ tuzilishini takrorlaydi
+├── composables/    useApi, useCatalogApi, useCreditCalculator ...
+├── constants/      konstantalar (auto-import)
+├── layouts/        default.vue
+├── locales/        uz.json, ru.json, en.json
+├── pages/          faqat route: har bir fayl o'z View komponentini chaqiradi
+├── plugins/        Nuxt pluginlar
 ├── stores/         Pinia (faqat global state)
-├── utils/          formatlash, xatolar
-├── types/          umumiy tiplar
-├── constants/      konstantalar
-├── layouts/ middleware/ plugins/ pages/
-i18n/locales/       uz.json, ru.json, en.json
-server/api/         mock endpointlar (backend tayyor bo'lguncha)
+├── types/          domen tiplari
+└── utils/          sof funksiyalar: formatlash, kredit hisobi, mapperlar
 tests/unit/         biznes logika testlari (kalkulyator, format, mapper)
 docs/               arxitektura va biznes logika hujjatlari
 ```
 
-Bog'lanish yo'nalishi: `pages → components → composables → api / features/*/utils`.
+`pages/` va `components/views/` mosligi:
+
+| Route                 | Page                       | View                                    |
+| --------------------- | -------------------------- | --------------------------------------- |
+| `/`                   | `pages/index.vue`          | `views/home/HomeView.vue`               |
+| `/catalog`            | `pages/catalog/index.vue`  | `views/catalog/CatalogView.vue`         |
+| `/catalog/[category]` | `pages/catalog/[category]` | `views/catalog/CatalogCategoryView.vue` |
+| `/product/[id]`       | `pages/product/[id].vue`   | `views/product/ProductDetailView.vue`   |
+| `/calculator`         | `pages/calculator.vue`     | `views/calculator/CalculatorView.vue`   |
+| `/cart`               | `pages/cart.vue`           | `views/cart/CartView.vue`               |
+| `/favorites`          | `pages/favorites.vue`      | `views/favorites/FavoritesView.vue`     |
+| `/search`             | `pages/search.vue`         | `views/search/SearchView.vue`           |
+| `/dev/ui`             | `pages/dev/ui.vue`         | `views/dev/DevUiView.vue`               |
+
+Bog'lanish yo'nalishi: `pages → components/views → components → composables → api / utils`.
+
+Komponent nomi fayl nomiga teng (`ui/UiButton.vue` → `<UiButton />`), papka nomi qo'shilmaydi,
+shuning uchun har bir fayl nomi to'liq va takrorlanmas bo'lishi kerak.
 
 Qoidalar:
 
@@ -87,7 +108,7 @@ Qoidalar:
 - Maxfiy ma'lumot (pasport, PINFL, moliyaviy ma'lumot) `localStorage`, konsol va analytics'ga
   chiqarilmaydi.
 
-Yangi feature qo'shish: `app/features/<nom>/` papkasini oching, `calculator` ni namuna sifatida oling.
+Yangi sahifa qo'shish: `pages/` ga yupqa route fayl, `components/views/<nom>/` ga `<Nom>View.vue` yarating.
 
 ## Nomlash
 
