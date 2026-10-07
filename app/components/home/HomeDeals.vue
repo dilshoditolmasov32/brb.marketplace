@@ -19,7 +19,7 @@ const localePath = useLocalePath()
           <Icon name="lucide:arrow-right" size="16" class="shrink-0" />
         </UiButton>
       </div>
-      <ul class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
         <li v-for="product in products" :key="product.id">
           <ProductCard :product="product" class="h-full" />
         </li>

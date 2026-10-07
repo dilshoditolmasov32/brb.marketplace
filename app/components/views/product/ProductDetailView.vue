@@ -396,7 +396,7 @@ useHead({
 
     <section v-if="similar.length" class="mt-10">
       <h2 class="text-lg font-semibold text-text">{{ $t('productPage.similar') }}</h2>
-      <ul class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <ul class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
         <li v-for="item in similar" :key="item.id">
           <ProductCard :product="item" class="h-full" />
         </li>
