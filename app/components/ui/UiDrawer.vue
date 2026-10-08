@@ -40,6 +40,16 @@ const open = defineModel<boolean>({ default: false })
   border-radius: var(--radius-overlay) var(--radius-overlay) 0 0;
 }
 
+/* The header clips its overflow, so in a height-capped drawer a long body would squeeze it */
+.ui-drawer .el-drawer__header,
+.ui-drawer .el-drawer__footer {
+  flex-shrink: 0;
+}
+
+.ui-drawer .el-drawer__body {
+  min-height: 0;
+}
+
 .ui-drawer .el-drawer__header {
   margin-bottom: 12px;
   color: var(--text);
