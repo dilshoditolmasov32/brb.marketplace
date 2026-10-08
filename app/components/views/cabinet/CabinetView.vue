@@ -102,7 +102,7 @@ const stats = computed(() => [
 
     <section v-if="recommended.length" class="flex flex-col gap-3">
       <h2 class="text-base font-semibold text-text">{{ $t('cabinet.overview.recommended') }}</h2>
-      <ul class="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:grid-cols-3">
+      <ul class="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3">
         <li v-for="item in recommended" :key="item.id">
           <ProductCard :product="item" class="h-full" />
         </li>

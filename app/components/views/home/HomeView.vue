@@ -44,7 +44,7 @@ useSeoMeta({
     <div class="container-page py-4">
       <UiAlert :title="$t('home.promo.title')" dismissible>
         {{ $t('home.promo.description') }}
-      </UiAlert>
+      </UiAlert>  
     </div>
 
     <HomeProductTabs />

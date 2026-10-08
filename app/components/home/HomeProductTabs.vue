@@ -59,7 +59,7 @@ const {
 
       <ul
         v-else
-        class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         :aria-busy="status === 'pending'"
       >
         <template v-if="status === 'pending'">

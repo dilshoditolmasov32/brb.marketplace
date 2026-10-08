@@ -20,7 +20,7 @@ withDefaults(defineProps<{ variant?: 'block' | 'card' | 'list' }>(), { variant: 
     <span class="block h-4 w-28 animate-pulse rounded-sm bg-surface-muted" />
     <span
       class="block animate-pulse rounded-sm bg-surface-muted"
-      :class="variant === 'card' ? 'h-9 w-44' : 'h-4 w-64 max-w-full'"
+      :class="variant === 'card' ? 'h-9 w-44 max-w-full' : 'h-4 w-64 max-w-full'"
     />
     <span class="block h-4 w-full animate-pulse rounded-sm bg-surface-muted" />
     <span class="block h-4 w-40 animate-pulse rounded-sm bg-surface-muted" />

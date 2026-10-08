@@ -149,7 +149,9 @@ const actions = [
           <span class="sr-only xl:not-sr-only">{{ $t(action.labelKey) }}</span>
         </NuxtLink>
         <!-- Phones: the sections live in the bottom bar, the header keeps the language -->
-        <AppLanguageSwitcher class="md:hidden" />
+        <div class="md:hidden">
+          <AppLanguageSwitcher />
+        </div>
       </nav>
     </div>
 

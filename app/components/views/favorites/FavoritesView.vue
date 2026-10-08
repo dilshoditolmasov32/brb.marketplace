@@ -46,7 +46,7 @@ useSeoMeta({ title: () => t('favorites.title') })
 
       <ul
         v-else-if="isLoading && !visible.length"
-        class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5"
+        class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-5"
         aria-busy="true"
       >
         <li v-for="n in 4" :key="n"><UiSkeleton variant="card" /></li>
@@ -56,7 +56,7 @@ useSeoMeta({ title: () => t('favorites.title') })
         <p class="mt-2 text-sm text-text-secondary">
           {{ $t('favorites.count', { count: visible.length }) }}
         </p>
-        <ul class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+        <ul class="mt-4 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-5">
           <li v-for="product in visible" :key="product.id" class="flex flex-col gap-2">
             <ProductCard :product="product" class="flex-1" />
             <UiButton size="sm" variant="ghost" block @click="favorites.toggle(product.id)">
@@ -67,7 +67,10 @@ useSeoMeta({ title: () => t('favorites.title') })
       </template>
 
       <template #fallback>
-        <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5" aria-busy="true">
+        <ul
+          class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-5"
+          aria-busy="true"
+        >
           <li v-for="n in 4" :key="n"><UiSkeleton variant="card" /></li>
         </ul>
       </template>

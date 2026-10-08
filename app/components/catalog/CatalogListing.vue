@@ -233,7 +233,7 @@ watch(
 
         <ul
           v-else-if="status === 'pending'"
-          class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+          class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-4"
           aria-busy="true"
         >
           <li v-for="n in 8" :key="n"><UiSkeleton variant="card" /></li>
@@ -254,7 +254,7 @@ watch(
         </UiFeedback>
 
         <template v-else>
-          <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+          <ul class="mt-6 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-4">
             <li v-for="product in data.items" :key="product.id">
               <ProductCard :product="product" class="h-full" />
             </li>

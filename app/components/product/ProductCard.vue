@@ -16,7 +16,7 @@ const isInCart = computed(() => cart.has(props.product.id))
   <article
     class="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-overlay focus-within:border-primary motion-reduce:transition-none motion-reduce:hover:translate-y-0"
   >
-    <div class="absolute top-2 left-2 z-10 flex gap-1">
+    <div class="absolute inset-x-2 top-2 z-10 flex flex-wrap gap-1">
       <UiBadge v-if="product.discountPercent" tone="error">-{{ product.discountPercent }}%</UiBadge>
       <UiBadge tone="brand">{{ $t('product.installmentBadge') }}</UiBadge>
     </div>
@@ -33,7 +33,7 @@ const isInCart = computed(() => cart.has(props.product.id))
       />
     </div>
 
-    <div class="flex flex-1 flex-col gap-2 p-3">
+    <div class="flex flex-1 flex-col gap-2 p-2 sm:p-3">
       <h3 class="line-clamp-2 min-h-9 text-compact leading-4.5 font-semibold text-text">
         <!-- The stretched link makes the whole card clickable; the button stays above it -->
         <NuxtLink
@@ -61,19 +61,19 @@ const isInCart = computed(() => cart.has(props.product.id))
         <s v-if="product.oldPrice" class="text-2xs text-text-secondary">
           {{ format.currency(product.oldPrice) }}
         </s>
-        <p class="text-lg leading-6 font-bold text-text tabular-nums">
+        <p class="text-base leading-6 font-bold text-text tabular-nums sm:text-lg">
           {{ format.currency(product.price) }}
         </p>
       </div>
 
       <dl class="flex flex-col gap-0.5 rounded-lg bg-background p-2 text-2xs">
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex flex-wrap items-center justify-between gap-x-2">
           <dt class="text-text-secondary">{{ $t('product.monthlyPayment') }}:</dt>
           <dd class="text-compact font-bold text-primary tabular-nums">
             {{ format.currency(product.installment.monthlyPayment) }}
           </dd>
         </div>
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex flex-wrap items-center justify-between gap-x-2">
           <dt class="text-text-secondary">{{ $t('product.term') }}:</dt>
           <dd class="font-semibold text-text">
             {{ $t('finance.months', { count: product.installment.termMonths }) }} ·
@@ -90,7 +90,9 @@ const isInCart = computed(() => cart.has(props.product.id))
         :to="isInCart ? localePath(ROUTES.cart) : undefined"
         @click="!isInCart && cart.add(product.id)"
       >
-        {{ isInCart ? $t('product.inCart') : $t('product.addToCart') }}
+        <span class="min-w-0 truncate">
+          {{ isInCart ? $t('product.inCart') : $t('product.addToCart') }}
+        </span>
       </UiButton>
     </div>
   </article>
